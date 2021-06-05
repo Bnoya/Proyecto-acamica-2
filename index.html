@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gifos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <section class="menu">
             <div class="logo">
                 <img src="./recursos/logo-mobile.svg" alt="logo">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox" class="hamburger"><span></span></label>
             </div>
-            <div class="">
-                <nav class="hamburger">
-                    <ul>
-                        <li>Modo Nocturno</li>
-                        <li>Favoritos</li>
-                        <li>Mis Glifos</li>
-                        <li>+</li>
-                    </ul>
-                </nav>
+            <nav>
+                <ul class="nav-links">
+                    <li class="nightMode"> <a href="#">Modo Nocturno</a></li>
+                    <li><a href="./favoritos.html">Favoritos</a></li>
+                    <li><a href="./misGifos.html">Mis Glifos</a></li>
+                </ul>
+            </nav>
+            <div class="create">
+                <a href="#">+</a>
             </div>
         </section>
     </header>
     <main>
-
+        <div class="title">
+            <h1>Inspirate, busca, guarda, y crea los mejores <span class="world">GIFOS</span></h1>
+        </div>
     </main>
     <footer class="footer">
-        <div class="social">
-            
-        </div>
-        <div class="legal">
-            <p>Gifos 2020 All Rights Reserved.</p>
-        </div>
     </footer>
 </body>
 </html>

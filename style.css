@@ -75,6 +75,13 @@
   width: 100%;
 }
 
+.menu .nav-links .break-line {
+  content: "";
+  width: 41px;
+  height: 1px;
+  background-color: #ffffff;
+}
+
 .menu input:checked ~ .hamburger {
   background: transparent;
 }
@@ -129,6 +136,7 @@
   border-color: transparent;
 }
 
+/* menu hamburgesa funciona, necesita los span entre las opciones*/
 .create {
   display: none;
 }
@@ -255,6 +263,7 @@
   color: #572EE5;
   text-align: center;
   line-height: 30px;
+  margin-top: 41px;
 }
 
 .center .trending-container p {
@@ -273,6 +282,7 @@
   background-color: blue;
 }
 
+/* Centro funciona falta el carrusel hacerlo con js */
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,10 +331,198 @@
   margin-top: 48.7px;
 }
 
-.dark-mode body {
+/*footer en light mode funciona */
+/*inicia el Style particular de favoritos*/
+.center .favorites {
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center .favorites .gif-container .heart {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 36%;
+}
+
+.center .favorites .gif-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.center .favorites .gif-container .gif-carrusel {
+  background-color: #37383C;
+  height: 300px;
+  width: 100%;
+}
+
+.center .favorites .button {
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  height: 50px;
+  width: 125px;
+  background-color: transparent;
+  color: #572EE5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+/*Finaliza el style de favoritos*/
+/*Inicia Style de Mis GIFOS*/
+.center .my-gifs {
+  height: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center .my-gifs .gif-container .heart {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 36%;
+}
+
+.center .my-gifs .gif-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.center .my-gifs .gif-container .gif-carrusel {
+  background-color: #37383C;
+  height: 300px;
+  width: 100%;
+}
+
+.center .my-gifs .button {
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  height: 50px;
+  width: 125px;
+  background-color: transparent;
+  color: #572EE5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+/*finalizacstyle de Mis GIFOS*/
+.dark-mode {
+  /*menu en dark mode funciona*/
+  /* centro en dark mode funciona falta ver carrusel*/
+  /*footer en dark-mode funciona*/
+  /*inicia style dark para favorito*/
+  /*Termina style dark para favoritos*/
+  /*inicio style de mis gifos*/
+  /*termina style de mis gifos*/
+}
+
+.dark-mode .line {
+  background-color: #000000;
+}
+
+.dark-mode .menu {
   background: #37383C;
 }
 
+.dark-mode .menu .hamburger {
+  background-color: #FFFFFF;
+}
+
+.dark-mode .menu .hamburger::before, .dark-mode .menu .hamburger::after {
+  background-color: #FFFFFF;
+}
+
+.dark-mode .menu .nav-links {
+  background: #000000;
+}
+
+.dark-mode .center {
+  background: #37383C;
+}
+
+.dark-mode .center .title {
+  color: #ffffff;
+}
+
+.dark-mode .center .search-bar input {
+  border-color: #ffffff;
+}
+
+.dark-mode .center .center-text h3 {
+  color: #ffffff;
+}
+
+.dark-mode .center .center-text p {
+  color: #ffffff;
+}
+
+.dark-mode .center .trending-container {
+  background: #222326;
+}
+
+.dark-mode .center .trending-container h2 {
+  color: #ffffff;
+}
+
+.dark-mode .center .trending-container p {
+  color: #ffffff;
+}
+
+.dark-mode .footer {
+  background: #37383C;
+}
+
+.dark-mode .footer .social p {
+  color: #ffffff;
+}
+
+.dark-mode .footer p {
+  color: #ffffff;
+}
+
+.dark-mode .center .favorites .gif-container h2 {
+  color: #ffffff;
+}
+
+.dark-mode .center .favorites .button {
+  color: #ffffff;
+  border: 1px solid #FFFFFF;
+}
+
+.dark-mode .center .my-gifs .gif-container h2 {
+  color: #ffffff;
+}
+
+.dark-mode .center .my-gifs .button {
+  color: #ffffff;
+  border: 1px solid #FFFFFF;
+}
+
+/*dark mode funciona*/
 @media (min-width: 900px) {
   .menu {
     display: -webkit-box;
@@ -387,6 +585,7 @@
     line-height: 28px;
     text-decoration: line-through;
   }
+  /*aun no funciona revisar*/
   .create {
     display: unset;
     padding-left: 0;

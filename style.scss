@@ -59,6 +59,12 @@
         font-size: 25px;
         position: absolute;
         width: 100%;
+        .break-line{
+            content: "";
+            width: 41px;
+            height: 1px;
+            background-color: #ffffff;
+        }
     }
     
     input:checked ~ .hamburger{
@@ -108,6 +114,7 @@
     }
     
 }
+/* menu hamburgesa funciona, necesita los span entre las opciones*/
 .create{
     display: none;
 }
@@ -189,6 +196,7 @@
             color: #572EE5;
             text-align: center;
             line-height: 30px;
+            margin-top: 41px;
         }
         p{
             font-family: 'Roboto', sans-serif;
@@ -206,6 +214,7 @@
         }
     }
 }
+/* Centro funciona falta el carrusel hacerlo con js */
 .footer{
     display: flex;
     flex-direction: column;
@@ -243,11 +252,181 @@
         margin-top: 48.7px;
     }
 }
-.dark-mode{
-    body{
-        background: #37383C;
+/*footer en light mode funciona */
+
+/*inicia el Style particular de favoritos*/
+
+.center{
+    .favorites{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .gif-container{
+            .heart{
+                align-content: center;
+                margin-left: 36%;
+            }
+            h2{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 20px;
+                color: #572EE5;
+                text-align: center;
+                line-height: 30px;
+            }
+            .gif-carrusel{
+                background-color: #37383C;
+                height: 300px;
+                width: 100%;
+            }
+        }
+        .button{
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            border-radius: 25px;
+            height: 50px;
+            width: 125px;
+            background-color: transparent;
+            color: #572EE5;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
     }
 }
+/*Finaliza el style de favoritos*/
+/*Inicia Style de Mis GIFOS*/
+.center{
+    .my-gifs{
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .gif-container{
+            .heart{
+                align-content: center;
+                margin-left: 36%;
+            }
+            h2{
+                font-family: 'Montserrat', sans-serif;
+                font-size: 20px;
+                color: #572EE5;
+                text-align: center;
+                line-height: 30px;
+            }
+            .gif-carrusel{
+                background-color: #37383C;
+                height: 300px;
+                width: 100%;
+            }
+        }
+        .button{
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            border-radius: 25px;
+            height: 50px;
+            width: 125px;
+            background-color: transparent;
+            color: #572EE5;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+    }
+}
+/*finalizacstyle de Mis GIFOS*/
+.dark-mode{
+    .line{
+        background-color: #000000;
+    }
+    .menu{
+        background: #37383C;
+        .hamburger{
+            background-color: #FFFFFF;
+        }
+        .hamburger::before, .hamburger::after{
+            background-color: #FFFFFF;
+        }
+        .nav-links{
+            background: #000000;
+        }
+    }
+    /*menu en dark mode funciona*/
+    .center{
+        background: #37383C;
+        .title{
+            color: #ffffff;
+        }
+        .search-bar{
+            input{
+                border-color: #ffffff;
+            }
+        }
+        .center-text{
+            h3{
+                color: #ffffff;
+            }
+            p{
+                color: #ffffff;
+            }
+        }
+        .trending-container{
+            background: #222326;
+            h2{
+                color: #ffffff;
+            }
+            p{
+                color: #ffffff;
+            }
+        }
+    }
+    /* centro en dark mode funciona falta ver carrusel*/
+    .footer{
+        background: #37383C;
+        .social{
+            p{
+                color: #ffffff;
+            }
+        }
+        p{
+            color: #ffffff;
+        }
+    }
+    /*footer en dark-mode funciona*/
+    /*inicia style dark para favorito*/
+    .center{
+        .favorites{
+            .gif-container{
+                h2{
+                    color: #ffffff;
+                }
+            }
+            .button{
+                color: #ffffff;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+    /*Termina style dark para favoritos*/
+    /*inicio style de mis gifos*/
+    .center{
+        .my-gifs{
+            .gif-container{
+                h2{
+                    color: #ffffff;
+                }
+            }
+            .button{
+                color: #ffffff;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+    /*termina style de mis gifos*/
+
+
+}
+/*dark mode funciona*/
 @media (min-width: 900px) {
     .menu{
         display: flex;
@@ -295,6 +474,7 @@
             }
         }
     }
+    /*aun no funciona revisar*/
     .create{
         display: unset;
         padding-left: 0;

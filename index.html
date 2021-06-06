@@ -7,9 +7,12 @@
     <title>Gifos</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7b7f344aa2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body id="dark-mode">
     <header>
         <div class="menu">
                 <img src="./recursos/logo-mobile.svg" alt="logo" class="logo">
@@ -17,7 +20,7 @@
                 <label class="hamburger" for="checkbox"><span></span></label>
                 <nav>
                 <ul class="nav-links">
-                    <li class="nightMode"> <a href="#">Modo Nocturno</a></li>
+                    <li><button id="dark-mode" type="submit">Modo Nocturno </button></li>
                     <li><a href="./favoritos.html">Favoritos</a></li>
                     <li><a href="./misGifos.html">Mis Glifos</a></li>
                 </ul>
@@ -27,12 +30,39 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="center">
         <div class="title">
             <h1>Inspirate, busca, guarda, y crea los mejores <span class="world">GIFOS</span></h1>
         </div>
+        <div class="center-imagen">
+            <img src="./recursos/ilustra_header.svg" alt="" srcset="">
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar GIFOS y más">
+            <button type="submit" class="search-button"><img src="./recursos/icon-search.svg" alt="search button"></button>
+        </div>
+        <div class="center-text">
+            <h3>Trending</h3>
+            <p>Reactions, Entertainment, Sports, Stickers, Artist</p>
+        </div>
+        <div class="trending-container">
+            <h2>Trending GIFOS</h2>
+            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+            <div class="gif-carrusel">
+
+            </div>
+        </div>
     </main>
     <footer class="footer">
+        <div class="social">
+            <p>Compartir en: </p>
+            <div class="social-container">
+                <a href="https://www.facebook.com/Acamica.org"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/acamica/"> <i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; GIFOS 2020 All Rights Reserved</p>
     </footer>
     <script src="./script.js"></script>
 </body>

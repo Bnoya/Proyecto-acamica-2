@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+.line{
+    width: 100%;
+    height: 5px;
+    background-color: #572EE5;
+
+}
 .menu{
     img{
         margin-left: 29px;
@@ -191,6 +197,8 @@
             text-align: center;
             line-height: 23px;
             width: 333px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
         .gif-carrusel{
             height: 15,6%;

@@ -75,13 +75,6 @@
   width: 100%;
 }
 
-.menu .nav-links .break-line {
-  content: "";
-  width: 41px;
-  height: 1px;
-  background-color: #ffffff;
-}
-
 .menu input:checked ~ .hamburger {
   background: transparent;
 }
@@ -136,11 +129,11 @@
   border-color: transparent;
 }
 
-/* menu hamburgesa funciona, necesita los span entre las opciones*/
-.create {
+.menu nav li .create {
   display: none;
 }
 
+/* menu hamburgesa funciona, necesita los span entre las opciones*/
 .center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -538,10 +531,13 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    cursor: unset;
+    list-style: none;
+    background: white;
+    max-height: unset;
+    position: relative;
   }
   .menu img {
-    margin-left: 6.95%;
+    margin-left: 2%;
   }
   .menu .hamburger {
     display: none;
@@ -554,41 +550,59 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: white;
-    max-height: 80px;
-    margin-right: 84px;
-    width: 600px;
+    max-height: unset;
+    position: relative;
+  }
+  .menu .nav-links .create {
+    display: unset;
+    margin: 0;
+    padding-top: -20px;
   }
   .menu .nav-links li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     list-style: none;
-    padding: 1.5%;
+    position: relative;
+    margin-top: 0;
+  }
+  .menu .nav-links li button {
+    color: #572EE5;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
   }
   .menu .nav-links li a {
-    position: relative;
     text-decoration: none;
-    color: #060A24;
+    color: #572EE5;
     font-size: 16px;
-    font-family: 'IBM Plex Mono', monospace;
-  }
-  .menu .nav-links li a:hover {
-    color: #00F3BB;
-    text-decoration: line-through;
-  }
-  .menu .nav-links li a:active {
-    font-family: 'IBM Plex Mono';
-    font-size: 16px;
-    color: rgba(6, 10, 36, 0.56);
-    letter-spacing: 0;
-    line-height: 28px;
-    text-decoration: line-through;
+    font-family: 'Montserrat', sans-serif;
   }
   /*aun no funciona revisar*/
-  .create {
-    display: unset;
-    padding-left: 0;
+  .center .center-imagen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .center .center-imagen img {
+    width: 399px;
+    height: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

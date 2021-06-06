@@ -59,12 +59,6 @@
         font-size: 25px;
         position: absolute;
         width: 100%;
-        .break-line{
-            content: "";
-            width: 41px;
-            height: 1px;
-            background-color: #ffffff;
-        }
     }
     
     input:checked ~ .hamburger{
@@ -111,13 +105,13 @@
             background: transparent;
             border-color: transparent;
         }
+        .create{
+            display: none;
+        }
     }
     
 }
 /* menu hamburgesa funciona, necesita los span entre las opciones*/
-.create{
-    display: none;
-}
 .center{
     display: flex;
     flex-direction: column;
@@ -433,9 +427,12 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        cursor: unset;
+        list-style: none;
+        background: white;
+        max-height: unset;
+        position: relative;
         img{
-            margin-left: 6.95%;
+            margin-left: 2%;
         }
         .hamburger{
             display: none;
@@ -443,40 +440,46 @@
         .nav-links{
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: flex-start;
+            align-items: center;
             background: white;
-            max-height: 80px;
-            margin-right: 84px;
-            width: 600px;
-            
+            max-height: unset;
+            position: relative;
+            .create{
+                display: unset;
+                margin: 0;
+                padding-top: -20px;
+            }
             li{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
                 list-style: none;
-                padding: 1.5%;
+                position: relative;
+                margin-top: 0;
+                button{
+                    color: #572EE5;
+                    font-size: 16px;
+                    font-family: 'Montserrat', sans-serif;
+                }
                 a{
-                    position: relative;
                     text-decoration: none;
-                    color: #060A24;
+                    color: #572EE5;
                     font-size: 16px;
-                    font-family: 'IBM Plex Mono', monospace;
-                }
-                a:hover{
-                    color: #00F3BB;
-                    text-decoration: line-through;
-                }
-                a:active{
-                    font-family: 'IBM Plex Mono';
-                    font-size: 16px;
-                    color: rgba(6,10,36,0.56);
-                    letter-spacing: 0;
-                    line-height: 28px;
-                    text-decoration: line-through;
+                    font-family: 'Montserrat', sans-serif;
                 }
             }
         }
     }
     /*aun no funciona revisar*/
-    .create{
-        display: unset;
-        padding-left: 0;
+    .center{
+        .center-imagen{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 399px;
+                height: auto;
+            }
+        }
     }
 }

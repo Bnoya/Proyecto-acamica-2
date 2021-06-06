@@ -52,6 +52,7 @@
         list-style: none;
         font-size: 25px;
     }
+    
     input:checked ~ .hamburger{
         background: transparent;
     }
@@ -59,12 +60,13 @@
         transform: rotate(-45deg);
         top: 0;
     }
+    input:checked ~ nav ul {
+        max-height: 500px;
+        z-index: 8;
+    }
     input:checked ~ .hamburger::after{
         transform: rotate(45deg);
         top: 0;
-    }
-    input:checked ~ nav ul {
-        max-height: 500px;
     }
     nav li { 
         list-style: none;
@@ -82,9 +84,10 @@
             height: 30px;
         }
     }
-    .create{
-        display: none;
-    }
+    
+}
+.create{
+    display: none;
 }
 .title{
     text-align: center;
@@ -118,7 +121,7 @@
         .nav-links{
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: flex-end;
             background: white;
             max-height: 80px;
             margin-right: 84px;
@@ -148,5 +151,9 @@
                 }
             }
         }
+    }
+    .create{
+        display: unset;
+        padding-left: 0;
     }
 }

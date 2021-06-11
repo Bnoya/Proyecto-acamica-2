@@ -288,6 +288,11 @@
   width: 357px;
 }
 
+.center .trending-container .container-gifs .gif-carrusel .gifs:hover {
+  background: #572EE5;
+  opacity: 0.6;
+}
+
 /* Centro funciona falta el carrusel hacerlo con js */
 .footer {
   display: -webkit-box;

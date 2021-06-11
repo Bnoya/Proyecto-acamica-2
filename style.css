@@ -270,9 +270,22 @@
   padding-right: 40px;
 }
 
-.center .trending-container .gif-carrusel {
+.center .trending-container .container-gifs .gif-carrusel {
   height: 15,6%;
   background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: auto;
+}
+
+.center .trending-container .container-gifs .gif-carrusel .gifs {
+  height: 275px;
+  width: 357px;
 }
 
 /* Centro funciona falta el carrusel hacerlo con js */
@@ -422,7 +435,7 @@
   font-weight: bold;
 }
 
-/*finalizacstyle de Mis GIFOS*/
+/*finaliza style de Mis GIFOS*/
 .dark-mode {
   /*menu en dark mode funciona*/
   /* centro en dark mode funciona falta ver carrusel*/
@@ -557,7 +570,7 @@
         -ms-flex-align: center;
             align-items: center;
     background: white;
-    max-height: unset;
+    max-height: 95px;
     position: relative;
   }
   .menu .nav-links .create {

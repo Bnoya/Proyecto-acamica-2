@@ -202,9 +202,19 @@
             padding-left: 40px;
             padding-right: 40px;
         }
-        .gif-carrusel{
-            height: 15,6%;
-            background-color: blue;
+        .container-gifs{
+
+            .gif-carrusel{
+                height: 15,6%;
+                background-color: blue;
+                display: flex;
+                flex-direction: row;
+                overflow-x: auto;
+                .gifs{
+                    height: 275px;
+                    width: 357px;
+                }
+            }
         }
     }
 }
@@ -328,7 +338,7 @@
         }
     }
 }
-/*finalizacstyle de Mis GIFOS*/
+/*finaliza style de Mis GIFOS*/
 .dark-mode{
     .line{
         background-color: #000000;
@@ -420,6 +430,7 @@
 
 
 }
+
 /*dark mode funciona*/
 @media (min-width: 900px) {
     .menu{
@@ -443,7 +454,7 @@
             justify-content: flex-start;
             align-items: center;
             background: white;
-            max-height: unset;
+            max-height: 95px;
             position: relative;
             .create{
                 display: unset;

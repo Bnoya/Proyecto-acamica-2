@@ -11,7 +11,7 @@
   background-color: #572EE5;
 }
 
-.menu img {
+.menu a img {
   margin-left: 29px;
   margin-top: 22px;
 }
@@ -198,7 +198,7 @@
 }
 
 .center .search-bar .search-button {
-  margin-left: -40px;
+  margin-left: 0px;
   background: transparent;
   border-color: transparent;
 }
@@ -270,9 +270,7 @@
   padding-right: 40px;
 }
 
-.center .trending-container .container-gifs .gif-carrusel {
-  height: 15,6%;
-  background-color: blue;
+.center .trending-container .container-gifs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,17 +278,40 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  overflow-x: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.center .trending-container .container-gifs .gif-carrusel .gifs {
+.center .trending-container .container-gifs .gif-carrusel {
+  height: 15.6%;
+  width: 74.8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.center .trending-container .container-gifs .gif-carrusel .gifs-div {
   height: 275px;
   width: 357px;
+}
+
+.center .trending-container .container-gifs .gif-carrusel .gifs-img {
+  height: 100%;
+  width: 100%;
 }
 
 .center .trending-container .container-gifs .gif-carrusel .gifs:hover {
   background: #572EE5;
   opacity: 0.6;
+}
+
+.center .trending-container .container-gifs .btn-slide {
+  display: none;
 }
 
 /* Centro funciona falta el carrusel hacerlo con js */
@@ -609,7 +630,14 @@
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
   }
-  /*aun no funciona revisar*/
+  .center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .center .center-imagen {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -621,6 +649,62 @@
   .center .center-imagen img {
     width: 399px;
     height: auto;
+  }
+  .center .container-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .center .container-search .search-gifs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 72%;
+  }
+  .center .container-search .search-gifs .gifs-div {
+    width: 220px;
+    height: 200px;
+  }
+  .center .container-search .search-gifs .gifs-div .gifs-img {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    margin-top: 10px;
+  }
+  .center .trending-container .container-gifs .gif-carrusel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 78,4%;
+  }
+  .center .trending-container .container-gifs .btn-slide {
+    display: unset;
+    height: 40px;
+    width: 40px;
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .dark-mode .menu .nav-links {
+    background-color: unset;
   }
 }
 /*# sourceMappingURL=style.css.map */

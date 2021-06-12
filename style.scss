@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
 .line{
     width: 100%;
     height: 5px;
@@ -10,9 +13,11 @@
 
 }
 .menu{
-    img{
-        margin-left: 29px;
-        margin-top: 22px;
+    a{
+        img{
+            margin-left: 29px;
+            margin-top: 22px;
+        }
     }
     label{
         float: right;
@@ -151,7 +156,7 @@
             padding-left: 15px;
         }
         .search-button{
-            margin-left: -40px;
+            margin-left: 0px;
             background: transparent;
             border-color: transparent;
         }
@@ -203,21 +208,29 @@
             padding-right: 40px;
         }
         .container-gifs{
-
+            display:flex;
+            flex-direction: row;
+            align-items: center;
             .gif-carrusel{
-                height: 15,6%;
-                background-color: blue;
+                height: 15.6%;
+                width: 74.8%;
                 display: flex;
                 flex-direction: row;
-                overflow-x: auto;
-                .gifs{
+                .gifs-div{
                     height: 275px;
                     width: 357px;
+                }
+                .gifs-img{
+                    height: 100%;
+                    width: 100%;
                 }
                 .gifs:hover {
                     background: #572EE5;
                     opacity: 0.6;
                 }
+            }
+            .btn-slide{
+                display: none;
             }
         }
     }
@@ -486,14 +499,65 @@
             }
         }
     }
-    /*aun no funciona revisar*/
+    
     .center{
+        display: flex;
+        justify-content: center;
         .center-imagen{
             display: flex;
             justify-content: center;
             img{
                 width: 399px;
                 height: auto;
+            }
+        }
+        .container-search{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            .search-gifs{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 72%;
+                .gifs-div{
+                    width: 220px;
+                    height: 200px;
+                    .gifs-img{
+                        width: 100%;
+                        height: 100%;
+                        margin: 10px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        .trending-container{
+            .container-gifs{
+                .gif-carrusel{
+                    display: flex;
+                    flex-direction: row;
+                    width: 78,4%;
+                }
+                .btn-slide{
+                    display: unset;
+                    height: 40px;
+                    width: 40px;
+                    color: transparent;
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+
+
+    .dark-mode{
+        .menu{
+            .nav-links{
+                background-color: unset;
             }
         }
     }

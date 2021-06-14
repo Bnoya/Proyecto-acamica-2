@@ -148,15 +148,16 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        input{
+        .search-input{
             width: 334px;
             height: 50px;
             border-radius: 30px;
             border-color: #572EE5;
             padding-left: 15px;
         }
+
         .search-button{
-            margin-left: 0px;
+            margin-left: -35px;
             background: transparent;
             border-color: transparent;
         }
@@ -166,7 +167,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 31px;
-        margin-bottom: 45px;
+        margin-bottom: 55px;
         h3{
             font-family: 'Montserrat', sans-serif;
             font-size: 16px;
@@ -188,7 +189,7 @@
         flex-direction: column;
         align-items: center;
         background: #F3F5F8;
-        height: 430px;
+        margin-bottom: 2%;
         h2{
             font-family: 'Montserrat', sans-serif;
             font-size: 20px;
@@ -212,6 +213,7 @@
             flex-direction: row;
             align-items: center;
             .gif-carrusel{
+                margin: 0;
                 height: 15.6%;
                 width: 74.8%;
                 display: flex;
@@ -465,6 +467,9 @@
         .hamburger{
             display: none;
         }
+        nav{
+            margin-right: 10%;
+        }
         .nav-links{
             display: flex;
             flex-direction: row;
@@ -473,6 +478,8 @@
             background: white;
             max-height: 95px;
             position: relative;
+            overflow: unset;
+            
             .create{
                 display: unset;
                 margin: 0;
@@ -485,6 +492,7 @@
                 list-style: none;
                 position: relative;
                 margin-top: 0;
+                height: unset;
                 button{
                     color: #572EE5;
                     font-size: 16px;
@@ -534,6 +542,7 @@
             }
         }
         .trending-container{
+            height: 640px;
             .container-gifs{
                 .gif-carrusel{
                     display: flex;

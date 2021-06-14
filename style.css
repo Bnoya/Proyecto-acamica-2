@@ -189,7 +189,7 @@
           justify-content: center;
 }
 
-.center .search-bar input {
+.center .search-bar .search-input {
   width: 334px;
   height: 50px;
   border-radius: 30px;
@@ -198,7 +198,7 @@
 }
 
 .center .search-bar .search-button {
-  margin-left: 0px;
+  margin-left: -35px;
   background: transparent;
   border-color: transparent;
 }
@@ -215,7 +215,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin-top: 31px;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 
 .center .center-text h3 {
@@ -247,7 +247,7 @@
       -ms-flex-align: center;
           align-items: center;
   background: #F3F5F8;
-  height: 430px;
+  margin-bottom: 2%;
 }
 
 .center .trending-container h2 {
@@ -284,6 +284,7 @@
 }
 
 .center .trending-container .container-gifs .gif-carrusel {
+  margin: 0;
   height: 15.6%;
   width: 74.8%;
   display: -webkit-box;
@@ -581,6 +582,9 @@
   .menu .hamburger {
     display: none;
   }
+  .menu nav {
+    margin-right: 10%;
+  }
   .menu .nav-links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -598,6 +602,7 @@
     background: white;
     max-height: 95px;
     position: relative;
+    overflow: unset;
   }
   .menu .nav-links .create {
     display: unset;
@@ -618,6 +623,7 @@
     list-style: none;
     position: relative;
     margin-top: 0;
+    height: unset;
   }
   .menu .nav-links li button {
     color: #572EE5;
@@ -684,6 +690,9 @@
     height: 100%;
     margin: 10px;
     margin-top: 10px;
+  }
+  .center .trending-container {
+    height: 640px;
   }
   .center .trending-container .container-gifs .gif-carrusel {
     display: -webkit-box;

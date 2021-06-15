@@ -23,7 +23,6 @@ async function getGifTrending(){
             const img = document.createElement('img');
             img.src=info.data[index].images.original.url;
             img.setAttribute("class", "gifs-img");
-
             div.setAttribute("class", "gifs-div");
             img.setAttribute("id", info.data[index].id);
             gif.appendChild(div)
@@ -52,16 +51,15 @@ async function searchBar(){
             del.remove();
         }
     }
-
     let url=`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=12&q=${word}`;
     try{
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
-        for (let index = 0; index < 12; index++){
-            const div = document.createElement('div');
-            const img = document.createElement('img');
-            img.src=data.data[index].images.original.url;
+        for (let i = 0; i < 12; i++){
+            let div = document.createElement('div');
+            let img = document.createElement('img');
+            img.src=data.data[i].images.original.url;
             div.setAttribute("class", "gifs-div");
             img.setAttribute("class", "gifs-img");
             div.setAttribute('id', 'del')
@@ -73,21 +71,36 @@ async function searchBar(){
         console.log(error);
     }
 }
-
-
 /*Search suggestion*/ 
-
-
 let bar =document.getElementById("search-bar");
 let input = document.getElementById('search_input');
+let sugges = document.getElementById('suggestions')
 input.addEventListener('keyup', suggestionBar, true);
 async function suggestionBar(){
     console.log(input.value);
+    for (let i=0; i<12; i++){
+        let del = document.getElementById('del');
+        if (del !== null){
+            del.remove();
+        }
+    }
     let url = `https://api.giphy.com/v1/gifs/search/tags?api_key=${apiKey}&q=${input.value}&limit=4`;
     try{
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
+        for (let i=0 ; i < 4; i++){
+            let div = document.createElement('div');
+            let text = document.createElement('button');
+            text.innerText = data.data[i].name;
+            div.setAttribute("class", "sug-div");
+            div.setAttribute('id', 'del');
+            text.setAttribute('class','button-sug');
+            text.setAttribute('id',`sug-${i}`);
+            sugges.appendChild(div);
+            div.appendChild(text);
+        }
+        
     } catch (error) {
         console.log(error);
     }

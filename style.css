@@ -576,8 +576,8 @@
     max-height: unset;
     position: relative;
   }
-  .menu img {
-    margin-left: 2%;
+  .menu a img {
+    margin-left: 156px;
   }
   .menu .hamburger {
     display: none;
@@ -655,6 +655,24 @@
   .center .center-imagen img {
     width: 399px;
     height: auto;
+  }
+  .center .suggestions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #FFFFFF;
+    height: 200px;
+  }
+  .center .suggestions .sug-div .button-sug {
+    background: transparent;
+    border-color: transparent;
   }
   .center .container-search {
     display: -webkit-box;

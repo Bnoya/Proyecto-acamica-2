@@ -461,8 +461,10 @@
         background: white;
         max-height: unset;
         position: relative;
-        img{
-            margin-left: 2%;
+        a{
+            img{
+                margin-left: 156px;
+            }
         }
         .hamburger{
             display: none;
@@ -511,12 +513,26 @@
     .center{
         display: flex;
         justify-content: center;
+
         .center-imagen{
             display: flex;
             justify-content: center;
             img{
                 width: 399px;
                 height: auto;
+            }
+        }
+        .suggestions{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFFFFF;
+            height: 200px;
+            .sug-div{
+                .button-sug{
+                    background: transparent;
+                    border-color: transparent;
+                }
             }
         }
         .container-search{

@@ -197,6 +197,11 @@
   padding-left: 15px;
 }
 
+.center .search-bar .search.input:focus {
+  border-color: #572EE5;
+  border-radius: 30px;
+}
+
 .center .search-bar .search-button {
   margin-left: -35px;
   background: transparent;

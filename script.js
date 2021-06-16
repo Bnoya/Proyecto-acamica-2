@@ -78,17 +78,23 @@ let sugges = document.getElementById('suggestions')
 input.addEventListener('keyup', suggestionBar, true);
 async function suggestionBar(){
     console.log(input.value);
-    for (let i=0; i<12; i++){
+    if(input.value == ''){
+        sugges.classList.remove('suggestions');
+    }else{
+        sugges.setAttribute('class', 'suggestions');
+    }
+    for (let i=0; i<4; i++){
         let del = document.getElementById('del');
         if (del !== null){
             del.remove();
         }
     }
-    let url = `https://api.giphy.com/v1/gifs/search/tags?api_key=${apiKey}&q=${input.value}&limit=4`;
+    let url = `https://api.giphy.com/v1/gifs/search/tags?api_key=${apiKey}&q=${input.value}&limit=5`;
     try{
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
+        
         for (let i=0 ; i < 4; i++){
             let div = document.createElement('div');
             let text = document.createElement('button');

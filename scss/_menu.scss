@@ -1,0 +1,167 @@
+.line{
+    width: 100%;
+    height: 5px;
+    background-color: #572EE5;
+}
+
+.menu{
+    a{
+        img{
+            margin-left: 29px;
+            margin-top: 22px;
+        }
+    }
+    label{
+        float: right;
+    }
+    .hamburger{
+        display: block;
+        position: relative;
+        content: '';
+        width: 18px;
+        height: 2px;
+        background-color: #572EE5;
+        transition: background-color .2s;
+        margin-top: 50px;
+        margin-right: 10px;
+    }
+    .hamburger::before, .hamburger::after{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #572EE5;
+        transition: transform .2s ease-out;
+    }
+    .hamburger::before{
+        top: -5px;
+    }
+    .hamburger::after{
+        top: 5px;
+    }
+    input{
+        display: none;
+    }
+    nav{
+        clear: both;
+    }
+    .nav-links{
+        background: rgba(87,46,229,0.90);
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .4s ease-in-out;
+        list-style: none;
+        font-size: 25px;
+        position: absolute;
+        width: 100%;
+    }
+    input:checked ~ .hamburger{
+        background: transparent;
+    }
+    input:checked ~ .hamburger::before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    input:checked ~ .hamburger::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    input:checked ~ nav ul{
+        max-height: 100%;
+    }
+    nav li{
+        list-style: none;
+        text-align: center;
+        height: 40px;
+        margin-top: 40px;
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            letter-spacing: 0;
+            line-height: 28px;
+            padding-left: 16px;
+        }
+        button{
+            text-decoration: none;
+            color: #ffffff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            letter-spacing: 0;
+            line-height: 28px;
+            padding-left: 16px;
+            height: 30px;
+            background: transparent;
+            border-color: transparent;
+        }
+        .create{
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        background: white;
+        max-height: unset;
+        position: relative;
+        a{
+            img{
+                margin-left: 156px;
+            }
+        }
+        .hamburger{
+            display: none;
+        }
+        nav{
+            margin-right: 10%;
+        }
+        .nav-links{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            background: white;
+            max-height: 95px;
+            position: relative;
+            overflow: unset;
+            
+            .create{
+                display: unset;
+                margin: 0;
+                padding-top: -20px;
+            }
+            li{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                list-style: none;
+                position: relative;
+                margin-top: 0;
+                height: unset;
+                button{
+                    color: #572EE5;
+                    font-size: 16px;
+                    font-family: 'Montserrat', sans-serif;
+                }
+                a{
+                    text-decoration: none;
+                    color: #572EE5;
+                    font-size: 16px;
+                    font-family: 'Montserrat', sans-serif;
+                }
+            }
+        }
+    }
+}

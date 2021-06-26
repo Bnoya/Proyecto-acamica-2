@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gifos</title>
+    <title>Gifs - Home</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7b7f344aa2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./scss/style.css">
 </head>
-<body id="dark-mode" >
+<body id='dark-mode'>
     <div class="line"></div>
     <header>
         <div class="menu">
-                <a href="./index.html"><img src="./recursos/logo-mobile.svg" alt="logo" class="logo"></a> 
-                <input type="checkbox" id="checkbox">
-                <label class="hamburger" for="checkbox"><span></span></label>
-                <nav>
+            <a href="./index.html"><img src="./recursos/logo-desktop.svg" alt="Gifos logo" ></a>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label class="hamburger" for="checkbox"><span></span></label>
+            <nav>
                 <ul class="nav-links">
-                    <li><button id="dark-mode-btn" type="submit">Modo Nocturno </button></li>
-                    <li><a href="./favoritos.html">Favoritos</a></li>
-                    <li><a href="./misGifos.html">Mis Glifos</a></li>
-                    <li><a href="./newGif.html" class="create"><img src="./recursos/CTA-crear-gifo-active.svg" alt=""></a></li>
+                    <li> <button id="dark-mode-btn" type="submit">Modo Nocturno</button> </li>
+                    <li> <a href="./favoritos.html"> Favoritos</a> </li>
+                    <li><a href="./misGifs.html">Mis Gifs</a></li>
+                    <li><a href="./newGif.html" class="create"><img src="./recursos/CTA-crear-gifo-active.svg" alt="añadir gif" ></a></li>
                 </ul>
             </nav>
         </div>
@@ -37,19 +37,24 @@
             <img src="./recursos/ilustra_header.svg" alt="" srcset="">
         </div>
         <div class="search-bar">
+            <img class="search-icon" id="search-gray" src="./recursos/icon-search-mod-gray.svg" alt="">
             <input type="text" class="search-input" id="search_input" placeholder="Buscar GIFOS y más">
             <button type="submit" class="search-button" id="btn_search"><img src="./recursos/icon-search.svg" alt="search button"></button>
         </div>
-        <div id="suggestions"></div>
+        <div id="search-result-line" class="search-result-line hide"></div>
+        <div class="container-r">
+            <div id="sugg-div" class="results">
+                <ul id="results-ul" class="sugg-results">
+                </ul>
+            </div>
+        </div>
         <div class="center-text">
             <h3>Trending</h3>
             <p>Reactions, Entertainment, Sports, Stickers, Artist</p>
         </div>
         <div class="container-search">
             <div id="Search-gifs" class="search-gifs">
-
             </div>
-
         </div>
         <div class="trending-container">
             <h2>Trending GIFOS</h2>
@@ -58,7 +63,7 @@
             <div class="container-gifs">
                 <button id="back" class="btn-slide"><img src="./recursos/button-slider-left.svg" alt="prev Slide"></button>
                 <div class="gif-carrusel" id="gif">
-    
+                    
                 </div>
                 <button id="next" class="btn-slide"><img src="./recursos/Button-Slider-right.svg" alt="next Slide"></button>
             </div>
@@ -76,6 +81,7 @@
         <p>&copy; GIFOS 2020 All Rights Reserved</p>
     </footer>
     <div class="line"></div>
-    <script src="./script.js"></script>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

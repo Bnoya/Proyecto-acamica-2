@@ -1,0 +1,102 @@
+.dark-mode{
+    .line{
+        background-color: #000000;
+    }
+    .menu{
+        background: #37383C;
+        .hamburger{
+            background-color: #FFFFFF;
+        }
+        .hamburger::before, .hamburger::after{
+            background-color: #FFFFFF;
+        }
+        .nav-links{
+            background: #000000;
+        }
+    }
+    /*menu en dark mode funciona*/
+    .center{
+        background: #37383C;
+        .title{
+            color: #ffffff;
+        }
+        .search-bar{
+            input{
+                border-color: #ffffff;
+                background-color: #37383C;
+            }
+        }
+        .center-text{
+            h3{
+                color: #ffffff;
+            }
+            p{
+                color: #ffffff;
+            }
+        }
+        .trending-container{
+            background: #222326;
+            h2{
+                color: #ffffff;
+            }
+            p{
+                color: #ffffff;
+            }
+        }
+    }
+    /* centro en dark mode funciona falta ver carrusel*/
+    .footer{
+        background: #37383C;
+        .social{
+            p{
+                color: #ffffff;
+            }
+        }
+        p{
+            color: #ffffff;
+        }
+    }
+    /*footer en dark-mode funciona*/
+    /*inicia style dark para favorito*/
+    .center{
+        .favorites{
+            .gif-container{
+                h2{
+                    color: #ffffff;
+                }
+            }
+            .button{
+                color: #ffffff;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+    /*Termina style dark para favoritos*/
+    /*inicio style de mis gifos*/
+    .center{
+        .my-gifs{
+            .gif-container{
+                h2{
+                    color: #ffffff;
+                }
+            }
+            .button{
+                color: #ffffff;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+    /*termina style de mis gifos*/
+
+
+}
+
+@media (min-width: 900px){
+    .dark-mode{
+        .menu{
+            .nav-links{
+                background-color: unset;
+            }
+        }
+    }
+}

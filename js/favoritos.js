@@ -10,6 +10,11 @@ button.addEventListener("click", startDarkMode, true);
 function getfavs (){
         let fav = localStorage.getItem('favIDs');
         let favs= JSON.parse(fav);
+        if (favs ===null) {
+            localStorage.setItem('favIDs', JSON.stringify([]));
+            fav = localStorage.getItem('favIDs');
+            favs= JSON.parse(fav);
+        }
         return (favs);
     } 
     function setfavs (id){

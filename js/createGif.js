@@ -9,7 +9,7 @@ let start = document.getElementById('startBtn');
 start.addEventListener('click', ()=> {
     startGif();
 });
-let localstream ; 
+
 function startGif() {
     let turnoff1 = document.getElementById('text');
     turnoff1.setAttribute('class', 'off');
@@ -22,8 +22,16 @@ function startGif() {
 let chunks = [];
 
 function record(stream){
+    if ('srcObject' in video) {
+        video.srcObject = stream;
+    } else{
+        video.src = window.URL.createObjectURL(mediaStreamObj);
+    }
+    video.onloadeddata = () =>{
+        video.play();
+    };
+    
     video.srcObject = stream;
-    localstream = stream;
 
     let mediaRecorder = new MediaRecorder(stream, {
         MimeType: 'video/webm;codecs=h264'
@@ -70,15 +78,30 @@ function play(blob) {
     video.src = window.URL.createObjectURL(blob);
 }
 
-function videoOff(){
-    video.pause();
-    video.src = "";
-    localstream.getTracks()[0].stop();
-    console.log("Vid off");
-}
+
 
 /*Upload to giphy  */
 
-function UploadGif(){
-
+const saveMyGif = (data) => {
+    let myGifs = getMyGifs();
+    myGifs.push(data)
+    localStorage.setItem('myGifs', JSON.stringify(myGifs));
+}
+const uploadGif = async (blob) =>  {
+    const uploadUrl = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
+    let form = new FormData();
+    console.log(blob)
+    form.append('file', blob, 'myGif.gif');
+    let response = await fetch(uploadUrl, {
+        body: form,
+        method: "post"
+    })
+    let data = await response.json();
+    if (response.status == 200) {
+        saveMyGif(data.data.id)
+        return true
+    } else {
+        console.log('Hubo un error: '+ response.status)
+        return false
+    }
 }

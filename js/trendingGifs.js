@@ -4,7 +4,7 @@ async function getGifTrending(){
     const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
     const gif = document.getElementById('gif')
     let carrusel = [];
-    let url=`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`;
+    let url=`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=13`;
 
     try {
         const response= await fetch(url);

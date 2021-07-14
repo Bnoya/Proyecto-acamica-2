@@ -40,25 +40,25 @@ getGifTrending();
 
 async function getGifFavorite() { 
     try{
-    const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
-    let favs = getfavs();
-    console.log(favs);
-    let more = document.getElementById('btn');
-    let cont = document.getElementById('favorites_display'); 
-    let url = `https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${favs}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    for (let index = 0; index < 12; index++) {
-            createCard(data ,index, cont);
-        }
-    more.addEventListener('click', (index) => {
-        for (let index = 12; index < favs.length; index++) {
-            createCard(data ,index, cont);
-        }
-        more.style.display = 'none';
-    })
+        const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
+        let favs = getfavs();
+        console.log(favs);
+        let more = document.getElementById('btn');
+        let cont = document.getElementById('favorites_display'); 
+        let url = `https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${favs}`;
+        const response = await fetch(url);
+        const data = await response.json();
+        for (let index = 0; index < 12; index++) {
+                createCard(data ,index, cont);
+            }
+        more.addEventListener('click', (index) => {
+            for (let index = 12; index < favs.length; index++) {
+                createCard(data ,index, cont);
+            }
+            more.style.display = 'none';
+        })
     
-    } catch{
+    } catch (err) {
     console.log('Error');    
     }
 }

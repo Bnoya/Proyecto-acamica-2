@@ -275,7 +275,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  overflow-x: scroll;
+  /*overflow-x: scroll;*/
 }
 
 .trending-container .container-gifs .gif-carrusel .gifs-div {
@@ -1454,6 +1454,37 @@
   margin-right: 6px;
 }
 
+.center .title-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center .title-search .greyline {
+  margin-top: 70px;
+  width: 338px;
+  opacity: 0.5;
+  border: 1px solid #9CAFC3;
+}
+
+.center .title-search .h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
 .center .container-search .search-gifs .gifs-div {
   height: 200px;
   width: 260px;
@@ -1597,22 +1628,6 @@
     background: #572EE5;
     opacity: 1;
   }
-  .center .title-search {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .center .title-search .greyLine {
-    width: 338px;
-    height: 0.1px;
-    opacity: 0.5;
-    border: 1px solid #9CAFC3;
-    margin-top: 55px;
-  }
   .center .container-search {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1729,6 +1744,37 @@
   }
   .center .container-search .search-gifs .gifs-div:hover .gif-hover .btn img:hover {
     opacity: 1;
+  }
+  .title-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 100px;
+  }
+  .title-search .greyline {
+    width: 338px;
+    height: 0.1px;
+    opacity: 0.5;
+    color: #9CAFC3;
+    margin-top: 55px;
+  }
+  .title-search .h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

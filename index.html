@@ -36,24 +36,28 @@
         <div class="center-imagen">
             <img src="./recursos/ilustra_header.svg" alt="" srcset="">
         </div>
-        <div class="search-bar">
-            <img class="search-icon" id="search-gray" src="./recursos/icon-search-mod-gray.svg" alt="">
-            <input type="text" class="search-input" id="search_input" placeholder="Buscar GIFOS y más">
-            <button type="submit" class="search-button" id="btn_search"><img src="./recursos/icon-search.svg" alt="search button"></button>
-        </div>
-        <div id="search-result-line" class="search-result-line hide"></div>
-        <div class="container-r">
-            <div id="sugg-div" class="results">
-                <ul id="results-ul" class="sugg-results">
-                </ul>
+        <div class="search-border">
+            <div class="search-bar">
+                <img class="search-icon" id="search-gray" src="./recursos/icon-search-mod-gray.svg" alt="">
+                <input type="text" class="search-input" id="search_input" placeholder="Buscar GIFOS y más">
+                <button type="submit" class="search-button" id="btn_search"><img src="./recursos/icon-search.svg" alt="search button"></button>
             </div>
+            <div class="container-r">
+                <div id="search-result-line" class="search-result-line hide"></div>
+                <div id="sugg-div" class="results">
+                    <ul id="results-ul" class="sugg-results">
+                    </ul>
+                </div>
+            </div>
+
         </div>
-        <div class="center-text">
+        <div class="center-text" id="center-text">
             <h3>Trending</h3>
-            <p>Reactions, Entertainment, Sports, Stickers, Artist</p>
+            <p id="tranw"></p>
         </div>
-        <div class="container-search">
-            <div id="Search-gifs" class="search-gifs">
+        <div class="title-search" id="title-search"></div>
+        <div class="container-search" id="container-search">
+                <div id="Search-gifs" class="search-gifs">
             </div>
         </div>
         <div class="trending-container">
@@ -61,11 +65,11 @@
             <p>Mira los últimos</p>
             <p>GIFOS de nuestra comunidad.</p>
             <div class="container-gifs">
-                <button id="back" class="btn-slide"><img src="./recursos/button-slider-left.svg" alt="prev Slide"></button>
+                <button id="back" class="btn-slide prev"><img src="./recursos/button-slider-left.svg" alt="prev Slide"></button>
                 <div class="gif-carrusel" id="gif">
                     
                 </div>
-                <button id="next" class="btn-slide"><img src="./recursos/Button-Slider-right.svg" alt="next Slide"></button>
+                <button id="next" class="btn-slide next"><img src="./recursos/Button-Slider-right.svg" alt="next Slide"></button>
             </div>
         </div>
     </main>
@@ -82,6 +86,6 @@
     </footer>
     <div class="line"></div>
 
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,177 @@
+@media (min-width: 900px){  
+    .create{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            .camara{
+                display: flex;
+                align-items: center;
+                .cam{
+                    height: 162px;
+                    width: 123px;
+                }
+                .light{
+                    opacity: 0.4;
+                }
+            }
+            .rectangle{
+                display: flex;
+                flex-direction: row;
+                width: 688px;
+                height: 390px;
+                border: 1px solid #572EE5;
+                justify-content: space-between;
+                margin-left: 50px;
+                .frame1{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    justify-content: space-between;
+                    .angle1{
+                        width: 20px;
+                        height: 20px;
+                        border-top: 1px solid #50E3C2;
+                        border-left: 1px solid #50E3C2;
+                    }
+                    .angle2{
+                        width: 20px;
+                        height: 20px;
+                        border-bottom: 1px solid #50E3C2;
+                        border-left: 1px solid #50E3C2;
+                    }
+                }
+                .frame2{
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                    width: 480px;
+                    height: 320px;
+                    .video{
+                        width: 100%;
+                        height: 320px;
+                        position: absolute;
+                    }
+                    .text{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .titulo{
+                            font-family: 'Montserrat', sans-serif;
+                            font-size: 25px;
+                            color: #572EE5;
+                            text-align: center;
+                            line-height: 35px;
+                            width: 350px;
+    
+                            .gifos{
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 30 px;
+                                color: #5ED7C6;
+                                font-weight: bold;
+                            }
+                        }
+                        .texts{
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 16px;
+                            color: #000000;
+                            text-align: center;
+                            line-height: 29px;
+                        }
+                    }
+                }
+                .frame3{
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 20px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    justify-content: space-between;
+                    .angle3{
+                        width: 20px;
+                        height: 20px;
+                        border-top: 1px solid #50E3C2;
+                        border-right: 1px solid #50E3C2;
+                    }
+                    .angle4{
+                        width: 20px;
+                        height: 20px;
+                        border-bottom: 1px solid #50E3C2;
+                        border-right: 1px solid #50E3C2;
+                    }
+                }
+            }
+            .movieRoll{
+                display: flex;
+                align-self: flex-end;
+                margin-bottom: -5%;
+                justify-content: center;
+                margin-left: 50px;
+            }
+        }
+        .steps{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-right: -75px;
+            margin-top: 24px;
+            .step{
+                width: 32px;
+                height: 32px;
+                border: 1px solid #572EE5;
+                border-radius: 100%;
+                font-family:'Roboto', sans-serif;
+                font-size: 18px;
+                color: #572EE5;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 25px;
+            }
+        }
+        .span{
+            width: 55.3%;
+            height: 6.9px;
+            background: #572EE5;
+            margin-top: 19px;
+            margin-left: 50px;
+        }
+        .startBtn{
+            width: 127px;
+            height: 50px;
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50px;
+            margin-top: 20px;
+            button{
+                font-family:  'Montserrat', sans-serif;
+                font-size: 13px;
+                color: #572EE5;
+                letter-spacing: 0;
+                text-align: center;
+                background-color: transparent;
+                border: transparent;
+                
+            }
+        }
+    }
+    video{
+        height: 400px;
+        width: auto;
+    }
+}
+
+.off{
+    display: none;
+}

@@ -23,7 +23,7 @@
             <ul class="nav-links">
                 <li><button id="dark-mode-btn" type="submit">Modo Nocturno </button></li>
                 <li><a href="./favoritos.html">Favoritos</a></li>
-                <li><a href="./misGifos.html">Mis Glifos</a></li>
+                <li><a href="./misGifs.html">Mis Glifos</a></li>
                 <li><a href="./newGif.html" class="create"><img src="./recursos/CTA-crear-gifo-active.svg" alt=""></a></li>
             </ul>
         </nav>
@@ -41,9 +41,14 @@
             <h2>Trending GIFOS</h2>
             <p>Mira los últimos</p>
             <p>GIFOS de nuestra comunidad.</p>
-            <div class="gif-carrusel">
-
+            <div class="container-gifs">
+                <button id="back" class="btn-slide prev"><img src="./recursos/button-slider-left.svg" alt="prev Slide"></button>
+                <div class="gif-carrusel" id="gif">
+                    
+                </div>
+                <button id="next" class="btn-slide next"><img src="./recursos/Button-Slider-right.svg" alt="next Slide"></button>
             </div>
+        </div>
     </main>
 
     <footer class="footer">
@@ -58,6 +63,6 @@
         <p>&copy; GIFOS 2020 All Rights Reserved</p>
     </footer>
     <div class="line"></div>
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/misGifs.js"></script>
 </body>
 </html>

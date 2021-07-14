@@ -4,6 +4,7 @@
     align-items: center;
     background: #F3F5F8;
     margin-bottom: 2%;
+    width: 100%;
     h2{
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
@@ -27,7 +28,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        overflow-x: hidden;
+        width: 100%;
         button{
             display: none;
         }
@@ -35,18 +36,20 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            width: 100%;
+            overflow-x: scroll;
             .gifs-div{
                 height: 275px;
                 width: 357px;
+                display: flex;
+                flex-direction: column;
+                .gif-hover{
+                    display: none;
+                }
             }
             .gifs-img{
-                height: 100%;
-                width: 100%;
-            }
-            .gifs-div:hover {
-                background: #572EE5;
-                opacity: 0.6;
+                height: 275px;
+                width: 357px;
+                margin-left: 29px;
             }
         }
         .btn-slide{
@@ -62,12 +65,78 @@
     .trending-container{
         height: 640px;
         .container-gifs{
+            margin-top: 125px;
             .gif-carrusel{
                 display: flex;
                 flex-direction: row;
-                width: 100%;
+                width: 1180px;
                 justify-content: flex-start;
                 overflow-x: scroll;
+                .gifs-div{
+                    margin-right: 29px;
+
+                    &:hover {
+                        .gif-hover{
+                            margin-left: 29px;
+                            height: 275px;
+                            width: 357px;
+                            margin-top: -275px;
+                            background-color: #572EE599;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            .txt{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                margin-bottom: 10px;
+                                p{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    padding: 0;
+                                    margin-left: 18px;
+                                    font-family: 'Roboto';
+                                    font-size: 15px;
+                                    color: #FFFFFF;
+                                    text-align: center;
+                                }
+                                h6{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-size: 16px;
+                                    margin-left: 18px;
+                                    color: #FFFFFF;
+                                    font-weight: bold;
+                                }
+                            }
+                            .btn{
+                                display: flex;
+                                height: 50px;
+                                width: 100%;
+                                justify-content: flex-end;
+                                flex-direction: row;
+                                img{
+                                    margin-right: 10px;
+                                    margin-top: 10px;
+                                    height: 32px;
+                                    opacity: 0.6;
+                                    &:hover{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .gifs-img{
+                    height: 275px;
+                    width: 357px;
+                    &:hover {
+                        background: #572EE5;
+                        opacity: 1;
+                    }
+                }
             }
             .btn-slide{
                 display: unset;
@@ -76,6 +145,11 @@
                 color: transparent;
                 background-color: transparent;
                 border-color: transparent;
+                margin-left: 94px;
+            }
+            .next{
+                margin-right: 94px;
+                margin-left: 15px;
             }
         }
     }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear un GIF</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7b7f344aa2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./scss/style.css">
+</head>
+<body id="dark-mode">
+    <div class="line"></div>
+    <header>
+        <div class="menu">
+            <a href="./index.html"><img src="./recursos/logo-desktop.svg" alt="Gifos logo" ></a>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label class="hamburger" for="checkbox"><span></span></label>
+            <nav>
+                <ul class="nav-links">
+                    <li> <button id="dark-mode-btn" type="submit">Modo Nocturno</button> </li>
+                    <li> <a href="./favoritos.html"> Favoritos</a> </li>
+                    <li><a href="./misGifs.html">Mis Gifs</a></li>
+                    <li><a href="./newGif.html" class="create"><img src="./recursos/CTA-crear-gifo-active.svg" alt="añadir gif" ></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="create">
+        <div class="container">
+            <div class="camara">
+                <img src="./recursos/camara.svg"  class="cam">
+                <img src="./recursos/element-luz-camara.svg" class="light">
+            </div>
+            <div class="rectangle">
+                <div class="frame1">
+                    <div class="angle1"></div>
+                    <div class="angle2"></div>
+                </div>
+                <div class="frame2" id="frame2">
+                    <video src="" id="video" autoplay="true" class="video"></video>
+                    <div class="text" id="text">
+                        <h1 class="titulo">Aquí podrás crear tus propios <span class="gifos">GIFOS</span></h1>
+                        <p class="texts"> ¡Crea tu GIFO en sólo 3 pasos!</p>
+                        <p class="texts">(sólo necesitas una cámara para grabar un video)</p>
+                    </div>
+                </div>
+                <div class="frame3">
+                    <div class="angle3"></div>
+                    <div class="angle4"></div>
+                </div>
+            </div>
+            <div class="movieRoll">
+                <img src="./recursos/pelicula.svg" alt="" srcset="">
+            </div>
+            
+        </div>
+        <div class="steps">
+            <div class="step">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+        </div>
+        <div class="span">
+
+        </div>
+
+        <div class="startBtn" id="startBtn">
+            <button>COMENZAR</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="social">
+            <p>Compartir en: </p>
+            <div class="social-container">
+                <a href="https://www.facebook.com/Acamica.org"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/acamica/"> <i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; GIFOS 2020 All Rights Reserved</p>
+    </footer>
+    <div class="line"></div>
+    <script src="./js/createGif.js" type="module"></script>
+</body>
+</html>
+

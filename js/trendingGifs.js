@@ -9,6 +9,7 @@ async function getGifTrending(){
     try {
         const response= await fetch(url);
         const info = await response.json();
+        console.log('entre a api');
         console.log(info)
         for (let index = 0; index < 11; index++) {
             carrusel.push(info.data[index].images.original.url);

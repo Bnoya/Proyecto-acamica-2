@@ -14,7 +14,7 @@ button.addEventListener("click", startDarkMode, true);
 /* Gif Trainding */
 
 
-
+getGifTrending();
 /* Search Function */  
 
 
@@ -59,7 +59,7 @@ let sugges = document.getElementById('results-ul')
 input.addEventListener('input', suggestionBar);
 async function suggestionBar(){
     for (let i=0 ; i<15 ; i++){
-        let del = document.getElementById(`del`);
+        let del = document.getElementById(`dels`);
         if (del !== null){
             del.remove();
         }
@@ -86,7 +86,7 @@ async function suggestionBar(){
             text.innerText = data.data[i].name;
             search.src = './recursos/icon-search-mod-gray.svg';
             li.setAttribute("class", "sug-li");
-            li.setAttribute('id', `del`);
+            li.setAttribute('id', `dels`);
             text.setAttribute('class','button-sug');
             text.setAttribute('id',`sug-${i}`);
 

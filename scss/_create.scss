@@ -118,25 +118,60 @@
                 margin-left: 50px;
             }
         }
-        .steps{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-right: -75px;
-            margin-top: 24px;
-            .step{
-                width: 32px;
-                height: 32px;
-                border: 1px solid #572EE5;
-                border-radius: 100%;
-                font-family:'Roboto', sans-serif;
-                font-size: 18px;
-                color: #572EE5;
-                text-align: center;
+        .containerSteps{
+            width: 55.3%;
+            .positioning{
+                margin-left: 44%;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 25px;
+                justify-content: space-between;
+                .steps{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    margin-top: 24px;
+                    .step{
+                        width: 32px;
+                        height: 32px;
+                        border: 1px solid #572EE5;
+                        border-radius: 100%;
+                        font-family:'Roboto', sans-serif;
+                        font-size: 18px;
+                        color: #572EE5;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 25px;
+                    }
+                }
+                .clock{
+                    margin-right: 15px;
+                    .timer{
+                        margin-top: 24px;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: bold;
+                        font-size: 15px;
+                        color: #572EE5;
+                        letter-spacing: 0;
+                        text-align: center;
+                        line-height: 22px;
+                    }
+                    .reDo{
+                        margin-top: 24px;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: bold;
+                        font-size: 13px;
+                        color: #572EE5;
+                        letter-spacing: 0;
+                        text-align: center;
+                        justify-content: flex-end;
+                        background: transparent;
+                        border: transparent;
+                        width: 132px;
+                        border-bottom: 2px solid #5ED7C6;
+                        margin-right: 20%;
+                    }
+                }
             }
         }
         .span{
@@ -157,6 +192,12 @@
             align-items: center;
             margin-left: 50px;
             margin-top: 20px;
+            &:hover{
+                background: #572EE5;
+                button{
+                    color: #fff;
+                }
+            }
             button{
                 font-family:  'Montserrat', sans-serif;
                 font-size: 13px;
@@ -165,7 +206,6 @@
                 text-align: center;
                 background-color: transparent;
                 border: transparent;
-                
             }
         }
     }

@@ -853,6 +853,10 @@
   border: 1px solid #FFFFFF;
 }
 
+.dark-mode .create {
+  background: #37383C;
+}
+
 @media (min-width: 900px) {
   .dark-mode .menu .nav-links {
     background-color: unset;
@@ -1208,7 +1212,19 @@
             justify-content: center;
     margin-left: 50px;
   }
-  .create .steps {
+  .create .containerSteps {
+    width: 55.3%;
+  }
+  .create .containerSteps .positioning {
+    margin-left: 44%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .create .containerSteps .positioning .steps {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1216,13 +1232,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-right: -75px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-top: 24px;
   }
-  .create .steps .step {
+  .create .containerSteps .positioning .steps .step {
     width: 32px;
     height: 32px;
     border: 1px solid #572EE5;
@@ -1241,6 +1256,36 @@
         -ms-flex-align: center;
             align-items: center;
     margin-right: 25px;
+  }
+  .create .containerSteps .positioning .clock {
+    margin-right: 15px;
+  }
+  .create .containerSteps .positioning .clock .timer {
+    margin-top: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 22px;
+  }
+  .create .containerSteps .positioning .clock .reDo {
+    margin-top: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background: transparent;
+    border: transparent;
+    width: 132px;
+    border-bottom: 2px solid #5ED7C6;
+    margin-right: 20%;
   }
   .create .span {
     width: 55.3%;
@@ -1266,6 +1311,12 @@
             align-items: center;
     margin-left: 50px;
     margin-top: 20px;
+  }
+  .create .startBtn:hover {
+    background: #572EE5;
+  }
+  .create .startBtn:hover button {
+    color: #fff;
   }
   .create .startBtn button {
     font-family: 'Montserrat', sans-serif;

@@ -13,7 +13,7 @@ button.addEventListener("click", startDarkMode, true);
 
 /* Gif Trainding */
 
-/*getGifTrending();*/
+getGifTrending();
 /* Search Function */  
 
 

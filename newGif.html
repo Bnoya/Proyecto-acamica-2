@@ -43,9 +43,9 @@
                 <div class="frame2" id="frame2">
                     <video src="" id="video" autoplay="true" class="video"></video>
                     <div class="text" id="text">
-                        <h1 class="titulo">Aquí podrás crear tus propios <span class="gifos">GIFOS</span></h1>
-                        <p class="texts"> ¡Crea tu GIFO en sólo 3 pasos!</p>
-                        <p class="texts">(sólo necesitas una cámara para grabar un video)</p>
+                        <h1 class="titulo" id="Tmessage">Aquí podrás crear tus propios <span class="gifos">GIFOS</span></h1>
+                        <p class="texts" id="Pmessage1"> ¡Crea tu GIFO en sólo 3 pasos!</p>
+                        <p class="texts" id="Pmessage2">(sólo necesitas una cámara para grabar un video)</p>
                     </div>
                 </div>
                 <div class="frame3">
@@ -68,7 +68,6 @@
         </div>
 
         <div class="startBtn" id="startBtn">
-            <button>COMENZAR</button>
         </div>
     </main>
     <footer class="footer">
@@ -83,7 +82,9 @@
         <p>&copy; GIFOS 2020 All Rights Reserved</p>
     </footer>
     <div class="line"></div>
-    <script src="./js/createGif.js" type="module"></script>
+    <!--<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+    <script src="./js/GifCreate.js" type="module"></script>
 </body>
 </html>
 

@@ -1126,9 +1126,12 @@
     height: 320px;
   }
   .create .container .rectangle .frame2 .video {
-    width: 100%;
     height: 320px;
     position: absolute;
+  }
+  .create .container .rectangle .frame2 .video img {
+    width: 480px;
+    height: 320px;
   }
   .create .container .rectangle .frame2 .text {
     display: -webkit-box;

@@ -275,7 +275,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  /*overflow-x: scroll;*/
+  overflow-x: scroll;
 }
 
 .trending-container .container-gifs .gif-carrusel .gifs-div {
@@ -704,6 +704,7 @@
 
 .footer .social .social-container a {
   text-decoration: none;
+  margin-right: 15px;
 }
 
 .footer .social .social-container a i {
@@ -863,16 +864,252 @@
   }
 }
 
+.bigCardt {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bigCardt .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 40px;
+  margin-bottom: 78px;
+  margin-top: 40px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.bigCardt .carrusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bigCardt .carrusel .cardImg {
+  width: 318px;
+  height: 245px;
+  margin-left: 25px;
+  margin-bottom: 22px;
+}
+
+.bigCardt .carrusel .nextbtn {
+  display: none;
+}
+
+.bigCardt .carrusel .prevbtn {
+  display: none;
+}
+
+.bigCardt .footercont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bigCardt .footercont .cardFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 318px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bigCardt .footercont .cardFooter .cardText {
+  width: 255px;
+}
+
+.bigCardt .footercont .cardFooter .cardText h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+}
+
+.bigCardt .footercont .cardFooter .cardText h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #000000;
+}
+
+.bigCardt .footercont .cardFooter .footerbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bigCardt .footercont .cardFooter .footerbtn a {
+  margin-right: 5px;
+}
+
+.bigCardt .footercont .cardFooter .footerbtn a img {
+  margin-top: 12px;
+}
+
+.bigCard {
+  left: 0;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bigCard .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 40px;
+  margin-bottom: 78px;
+  margin-top: 40px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.bigCard .carrusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bigCard .carrusel .cardImg {
+  width: 318px;
+  height: 245px;
+  margin-left: 25px;
+  margin-bottom: 22px;
+}
+
+.bigCard .carrusel .nextbtn {
+  display: none;
+}
+
+.bigCard .carrusel .prevbtn {
+  display: none;
+}
+
+.bigCard .footercont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bigCard .footercont .cardFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 318px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bigCard .footercont .cardFooter .cardText {
+  width: 255px;
+}
+
+.bigCard .footercont .cardFooter .cardText h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+}
+
+.bigCard .footercont .cardFooter .cardText h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #000000;
+}
+
+.bigCard .footercont .cardFooter .footerbtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bigCard .footercont .cardFooter .footerbtn a {
+  margin-right: 5px;
+}
+
+.bigCard .footercont .cardFooter .footerbtn a img {
+  margin-top: 12px;
+}
+
 @media (min-width: 900px) {
   .bigCardt {
     z-index: 10;
     position: fixed;
+    left: 0;
     top: 0;
     height: 100vh;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
-    margin-left: -134px;
-    margin-right: 134px;
   }
   .bigCardt .header {
     display: -webkit-box;
@@ -936,22 +1173,22 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .bigCardt .footercont .cardFooter .footText h3 {
+  .bigCardt .footercont .cardFooter .cardText h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 16px;
     color: #000000;
-    text-align: center;
+    text-align: left;
   }
-  .bigCardt .footercont .cardFooter .footText h4 {
+  .bigCardt .footercont .cardFooter .cardText h4 {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: #000000;
-    text-align: center;
+    text-align: left;
   }
   .bigCard {
     z-index: 10;
-    position: fixed;
+    position: fixed, right 0;
     top: 0;
     height: 100vh;
     width: 100%;
@@ -1019,18 +1256,30 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .bigCard .footercont .cardFooter .footText h3 {
+  .bigCard .footercont .cardFooter .cardText h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 16px;
     color: #000000;
-    text-align: center;
+    text-align: left;
   }
-  .bigCard .footercont .cardFooter .footText h4 {
+  .bigCard .footercont .cardFooter .cardText h4 {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
     color: #000000;
-    text-align: center;
+    text-align: left;
+  }
+  .bigCard .footercont .cardFooter .footerbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .bigCard .footercont .cardFooter .footerbtn a {
+    margin-right: 5px;
   }
 }
 

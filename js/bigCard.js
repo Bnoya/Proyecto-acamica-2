@@ -38,19 +38,25 @@ function bigCard(info, index, gif){
     footerText.appendChild(titleX);
 
     const fav = document.createElement('img');
+    fav.setAttribute('class', 'favbtn');
         const favs = getfavs();
         const exist = favs.indexOf(info.data[index].id);
         if (exist > "-1") {
             fav.src='./recursos/icon-fav-active.svg';
-            fav.style.marginTop = '-35px';
+            /*fav.style.marginTop = '-35px';*/
         }else {
             fav.src='./recursos/icon-fav.svg';
         }
-
         
         const a = document.createElement('a');
         const download = document.createElement('img');
         download.src='./recursos/icon-download.svg';
+        download.addEventListener('mouseover', () => {
+            download.src = './recursos/icon-download-hover.svg'
+        });
+        download.addEventListener('mouseout', () =>{
+            download.src = './recursos/icon-download.svg';
+        });
         a.appendChild(download);
         download.addEventListener('click', async ()=> {
             let response = await fetch(`https://media2.giphy.com/media/${info.data[index].id}/giphy.gif?${apiKey}&rid=giphy.gif`);
@@ -75,13 +81,15 @@ function bigCard(info, index, gif){
     });
     let next = document.createElement('div');
     let imgNext = document.createElement('img');
-    imgNext.src = './recursos/Button-Slider-right.svg'
+    imgNext.src = './recursos/Button-Slider-right.svg';
+    next.setAttribute('class', 'nextbtn');
     imgNext.setAttribute('id', 'next');
     next.appendChild(imgNext);
 
     let prev = document.createElement('div');
     let imgprev = document.createElement('img');
-    imgprev.src = './recursos/Button-Slider-left.svg'
+    imgprev.src = './recursos/Button-Slider-left.svg';
+    prev.setAttribute('class', 'prevbtn');
     imgprev.setAttribute('id', 'prev');
     prev.appendChild(imgprev);
     

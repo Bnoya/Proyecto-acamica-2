@@ -277,3 +277,10 @@ const getMyGifs = () => {
     }
 }
 
+let newGifbtn = document.getElementById('createGifbtn');
+newGifbtn.addEventListener('mouseover', () => {
+    newGifbtn.src = './recursos/CTA-crear-gifo-hover.svg'
+});
+newGifbtn.addEventListener('mouseout', () =>{
+    newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
+});

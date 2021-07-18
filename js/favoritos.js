@@ -4,6 +4,7 @@ import { createCard } from './small_card.js';
 import { getGifTrending } from './trendingGifs.js';
 import { startDarkMode } from './darkMode.js';
 
+getGifTrending();
 var button = document.getElementById("dark-mode-btn");
 button.addEventListener("click", startDarkMode, true);
 
@@ -34,7 +35,6 @@ function getfavs (){
         localStorage.setItem('favIDs', JSON.stringify((favs)));
     }
 
-getGifTrending();
 
 /* renderizar gifs. primero tengo qeu obtener el gif apartir de ID */
 
@@ -64,5 +64,15 @@ async function getGifFavorite() {
 }
 
 getGifFavorite();
+
+
+let newGifbtn = document.getElementById('createGifbtn');
+newGifbtn.addEventListener('mouseover', () => {
+    newGifbtn.src = './recursos/CTA-crear-gifo-hover.svg'
+});
+newGifbtn.addEventListener('mouseout', () =>{
+    newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
+});
+
 
 export {getfavs, setfavs, removeFav};

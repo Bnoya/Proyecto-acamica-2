@@ -12,8 +12,8 @@ button.addEventListener("click", startDarkMode, true);
 
 
 /* Gif Trainding */
-
-getGifTrending();
+/*
+getGifTrending();*/
 /* Search Function */  
 
 
@@ -30,6 +30,8 @@ btn.addEventListener('click', ()=> {
 
 async function searchBar(word, search){
     
+    getGifTrending();
+
     let off = document.getElementById('center-text');
     let leave1 = document.getElementById('leave1');
     let leave2 = document.getElementById('leave2');
@@ -171,5 +173,38 @@ let sliderBtnL = document.getElementById('back');
 sliderBtnL.addEventListener('click', () => {
     scrollLeft();
 })
+
+
+let newGifbtn = document.getElementById('createGifbtn');
+newGifbtn.addEventListener('mouseover', () => {
+    newGifbtn.src = './recursos/CTA-crear-gifo-hover.svg'
+});
+newGifbtn.addEventListener('mouseout', () =>{
+    newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
+});
+
+let twitter = document.getElementById('twitter');
+twitter.addEventListener('mouseover', () => {
+    twitter.src = './recursos/icon-twitter-hover.svg'
+});
+twitter.addEventListener('mouseout', () =>{
+    twitter.src = './recursos/icon-twitter.svg';
+});
+
+let facebook = document.getElementById('facebook');
+facebook.addEventListener('mouseover', () => {
+    facebook.src = './recursos/icon_facebook_hover.svg'
+});
+facebook.addEventListener('mouseout', () =>{
+    facebook.src = './recursos/icon_facebook.svg';
+});
+
+let instagram = document.getElementById('instagram');
+instagram.addEventListener('mouseover', () => {
+    instagram.src = './recursos/icon_instagram-hover.svg'
+});
+instagram.addEventListener('mouseout', () =>{
+    instagram.src = './recursos/icon_instagram.svg';
+});
 
 export{startDarkMode, apiKey};

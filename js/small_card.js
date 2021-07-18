@@ -50,6 +50,9 @@ const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
     expand.setAttribute('id', 'bigCard');
     expand.addEventListener('click', () =>{
         bigCard(info, index, gif);
+    });
+    div.addEventListener('click', () =>{
+        bigCard(info, index, gif);
     })
 
     download.addEventListener('click', async ()=> {

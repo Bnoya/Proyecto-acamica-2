@@ -1,14 +1,154 @@
+.bigCardt{
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255,255,255,0.90);
+    .header{
+        display: flex;
+        flex-direction: row;
+        margin-right: 40px;
+        margin-bottom: 78px;
+        margin-top: 40px;
+        justify-content: flex-end;
+    }
+    .carrusel{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .cardImg{
+            width: 318px;
+            height: 245px;
+            margin-left: 25px;
+            margin-bottom: 22px;
+        }
+        .nextbtn{
+            display: none;
+        }
+        .prevbtn{
+            display: none;
+        }
+    }
+    .footercont{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .cardFooter{
+            display: flex;
+            flex-direction: row ;
+            width: 318px;
+            justify-content: space-between;
+            .cardText{
+                width: 255px;
+                h3{
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #000000;
+                }
+                h4{
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 15px;
+                    color: #000000;
+                }
+            }
+            .footerbtn{
+                display: flex;
+                flex-direction: row;
+                a{
+                    margin-right: 5px;
+                    img{
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+.bigCard{
+    left: 0;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255,255,255,0.90);
+    .header{
+        display: flex;
+        flex-direction: row;
+        margin-right: 40px;
+        margin-bottom: 78px;
+        margin-top: 40px;
+        justify-content: flex-end;
+    }
+    .carrusel{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .cardImg{
+            width: 318px;
+            height: 245px;
+            margin-left: 25px;
+            margin-bottom: 22px;
+        }
+        .nextbtn{
+            display: none;
+        }
+        .prevbtn{
+            display: none;
+        }
+    }
+    .footercont{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .cardFooter{
+            display: flex;
+            flex-direction: row ;
+            width: 318px;
+            justify-content: space-between;
+            .cardText{
+                width: 255px;
+                h3{
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #000000;
+                }
+                h4{
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 15px;
+                    color: #000000;
+                }
+            }
+            .footerbtn{
+                display: flex;
+                flex-direction: row;
+                a{
+                    margin-right: 5px;
+                    img{
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 @media (min-width: 900px){
     .bigCardt{
         z-index: 10;
         position: fixed;
+        left: 0;
         top: 0;
         height: 100vh;
         width: 100%;
         background-color: rgba(255,255,255,0.90);
-        margin-left: -134px;
-        margin-right: 134px;
         .header{
             display: flex;
             flex-direction: row;
@@ -39,19 +179,20 @@
                 flex-direction: row ;
                 width: 625px;
                 justify-content: space-between;
-                .footText{
+                .cardText{
+
                     h3{
                         font-family: 'Roboto', sans-serif;
                         font-weight: bold;
                         font-size: 16px;
                         color: #000000;
-                        text-align: center;
+                        text-align: left;
                     }
                     h4{
                         font-family: 'Roboto', sans-serif;
                         font-size: 15px;
                         color: #000000;
-                        text-align: center;
+                        text-align: left;
                     }
                 }
             }
@@ -59,7 +200,7 @@
     }
     .bigCard{
         z-index: 10;
-        position: fixed;
+        position: fixed, right 0;
         top: 0;
         height: 100vh;
         width: 100%;
@@ -94,22 +235,30 @@
                 flex-direction: row ;
                 width: 625px;
                 justify-content: space-between;
-                .footText{
+                .cardText{
+
                     h3{
                         font-family: 'Roboto', sans-serif;
                         font-weight: bold;
                         font-size: 16px;
                         color: #000000;
-                        text-align: center;
+                        text-align: left;
                     }
                     h4{
                         font-family: 'Roboto', sans-serif;
                         font-size: 15px;
                         color: #000000;
-                        text-align: center;
+                        text-align: left;
+                    }
+                }
+                .footerbtn{
+                    display: flex;
+                    flex-direction: row;
+                    a{
+                        margin-right: 5px;
                     }
                 }
             }
         }
-        }
+    }
 }

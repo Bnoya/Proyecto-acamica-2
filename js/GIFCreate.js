@@ -27,6 +27,7 @@ let upload = document.createElement('button');
 upload.innerText = 'SUBIR GIFO';
 
 let containerVideo = document.getElementById('frame2');
+let info = document.getElementById('text');
 
 let step1 = document.getElementById('step1');
 let step2 = document.getElementById('step2');
@@ -77,15 +78,80 @@ let StartnStop = async (stream) => {
         containerVideo.appendChild(playGIF);
         btnStop.remove();
         clockCont.appendChild(reDo);
-        upload.addEventListener('click', async() =>{
+        reDo.addEventListener('click', async () =>{
+            step2.style.color= '#572EE5';
+            step2.style.background = '#FFFFFF';
             upload.remove();
+            playGIF.remove();
+            reDo.remove();
+            start.appendChild(btnStart);
+            let stream = null;
+            step1.style.color = '#FFFFFF';
+            step1.style.background = '#572EE5';
+            try{
+                stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: true});
+                textCont.remove();
+                containerVideo.appendChild(video);
+                record(stream);
+            } catch (err) {
+                console.log(err);
+            }
+        })
+        upload.addEventListener('click', async() =>{
+            start.remove();
+            upload.remove();
+            reDo.remove();
+
             step3.style.color = '#FFFFFF';
             step3.style.background = '#572EE5';
             step2.style.color = '#572EE5';
             step2.style.background = '#FFF';
+            let purpleHover = document.createElement('div');
+            let loadingIcon = document.createElement('img');
+            let status = document.createElement('p');
+            let download = document.createElement('img');
+            let link = document.createElement('img');
+            let buttons = document.createElement('div');
+            let message = document.createElement('div');
+
+            status.innerText= 'Estamos Subiendo tu GIFO';
+            loadingIcon.src = './recursos/loader.svg';
+
+            purpleHover.setAttribute('class', 'purpleHover');
+            loadingIcon.setAttribute('class', 'loading spinning');
+            status.setAttribute('class', 'loadingMess');
+
+            download.setAttribute('class', 'download');
+            link.setAttribute('class', 'link');
+            buttons.setAttribute('class', 'buttons');
+            message.setAttribute('class', 'message');
+
+            containerVideo.appendChild(purpleHover);
+            purpleHover.appendChild(buttons);
+            purpleHover.appendChild(message);
+            buttons.appendChild(download);
+            buttons.appendChild(link);
+            message.appendChild(loadingIcon);
+            message.appendChild(status);
+
+
             let uploaded = await uploadGif(blob);
             if (uploaded) {
-                /*create hovers */
+                loadingIcon.classList.remove('spinning');
+                loadingIcon.src= './recursos/ok.svg'
+                status.innerText = 'GIFO subido con éxito'
+                download.src = './recursos/icon-download.svg';
+                link.src = './recursos/icon-link-normal.svg';
+                message.style.marginTop = '-32px';
+                download.addEventListener('mouseover', () => {
+                    download.src = './recursos/icon-download-hover.svg'
+                });
+                link.addEventListener('mouseover', () => {
+                    link.src = './recursos/icon-link-hover.svg'
+                });
+                
+            }else{
+                status.innerText = 'No podimos subir su GIFO. Intentelo mas tarde!'
             }
         });
         stream.getTracks()[0].stop();
@@ -191,7 +257,23 @@ const uploadGif = async (blob) =>  {
 }
 
 
+const saveMyGif = (data) => {
+    let myGifs = getMyGifs();
+    myGifs.push(data)
+    localStorage.setItem('myGifs', JSON.stringify(myGifs));
+}
 
-
-/* clock for record*/
+const getMyGifs = () => {
+    try {
+        let myGifs = JSON.parse(localStorage.getItem('myGifs'));
+        if (myGifs !== undefined && myGifs !== null){
+            return myGifs;
+        } else{
+            return []
+        }
+    } catch (err) {
+        console.log(err)
+        return [];
+    }
+}
 

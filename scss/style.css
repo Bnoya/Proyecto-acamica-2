@@ -1173,6 +1173,82 @@
     text-align: center;
     line-height: 29px;
   }
+  .create .container .rectangle .frame2 .purpleHover {
+    width: 480px;
+    height: 320px;
+    background-color: #572EE5;
+    opacity: 0.6;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .create .container .rectangle .frame2 .purpleHover .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-top: 11px;
+  }
+  .create .container .rectangle .frame2 .purpleHover .buttons .download {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-right: 12px;
+  }
+  .create .container .rectangle .frame2 .purpleHover .buttons .link {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-right: 12px;
+  }
+  .create .container .rectangle .frame2 .purpleHover .message {
+    height: 288px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .create .container .rectangle .frame2 .purpleHover .message .loading {
+    width: 22px;
+    height: 22px;
+  }
+  .create .container .rectangle .frame2 .purpleHover .message .spinning {
+    -webkit-animation: rotation 2s infinite linear;
+            animation: rotation 2s infinite linear;
+  }
+  .create .container .rectangle .frame2 .purpleHover .message .loadingMess {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-align: center;
+  }
   .create .container .rectangle .frame3 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1335,6 +1411,28 @@
 
 .off {
   display: none;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
 }
 
 * {

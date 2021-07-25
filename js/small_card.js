@@ -51,10 +51,9 @@ const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
     expand.addEventListener('click', () =>{
         bigCard(info, index, gif);
     });
-    div.addEventListener('click', () =>{
+    img.addEventListener('click', () =>{
         bigCard(info, index, gif);
-    })
-
+    });
     download.addEventListener('click', async ()=> {
         let response = await fetch(`https://media2.giphy.com/media/${info.data[index].id}/giphy.gif?${apiKey}&rid=giphy.gif`);
         let file = await response.blob();

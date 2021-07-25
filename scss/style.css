@@ -627,51 +627,172 @@
   }
 }
 
-.center .my-gifs {
-  height: 300px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.center .my-gifs .gif-container .heart {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-left: 36%;
-}
-
-.center .my-gifs .gif-container h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
-  color: #572EE5;
-  text-align: center;
-  line-height: 30px;
-}
-
-.center .my-gifs .gif-container .gif-carrusel {
-  background-color: #37383C;
-  height: 300px;
-  width: 100%;
-}
-
-.center .my-gifs .button {
-  border: 1px solid #572EE5;
-  border-radius: 25px;
-  border-radius: 25px;
-  height: 50px;
-  width: 125px;
-  background-color: transparent;
-  color: #572EE5;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
+@media (min-width: 900px) {
+  .center .my-gifs {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .center .my-gifs .gif-container .heart {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin-left: 36%;
+  }
+  .center .my-gifs .gif-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #572EE5;
+    text-align: center;
+    line-height: 30px;
+  }
+  .center .my-gifs .gif-container .gif-carrusel {
+    background-color: #37383C;
+    height: 300px;
+    width: 100%;
+  }
+  .center .my-gifs .myGifs-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 75%;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div {
+    height: 200px;
+    width: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 22px;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div .gif-hover {
+    display: none;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div .gifs-img {
+    width: 100%;
+    height: 100%;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div .gifs-img:hover {
+    background: #572EE5;
+    opacity: 1;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div:hover .gif-hover {
+    height: 200px;
+    width: 260px;
+    margin-top: -200px;
+    background-color: #572EE599;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div:hover .gif-hover .txt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div:hover .gif-hover .txt p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0;
+    margin-left: 18px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div:hover .gif-hover .txt h6 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-left: 18px;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div:hover .gif-hover .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div:hover .gif-hover .btn img {
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 32px;
+    opacity: 0.6;
+  }
+  .center .my-gifs .myGifs-container .myGifs_display .gifs-div:hover .gif-hover .btn img:hover {
+    opacity: 1;
+  }
+  .center .my-gifs .button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #572EE5;
+    border-radius: 25px;
+    border-radius: 25px;
+    height: 50px;
+    width: 125px;
+    background-color: transparent;
+    color: #572EE5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+  }
 }
 
 .footer {
@@ -1930,13 +2051,32 @@
   line-height: 25px;
 }
 
-.center .center-text p {
+.center .center-text .tranw {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+}
+
+.center .center-text .tranw span {
+  margin-right: 5px;
+}
+
+.center .center-text .tranw span p {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: #572EE5;
   text-align: center;
   line-height: 25px;
-  width: 225px;
 }
 
 /* Arranca el media query*/

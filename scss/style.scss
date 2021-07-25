@@ -167,14 +167,23 @@
             text-align: center;
             line-height: 25px;
         }
-        p{
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-            color: #572EE5;
-            text-align: center;
-            line-height: 25px;
-            width: 225px;
-        }
+        .tranw{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 80%;
+            span{
+                margin-right: 5px;
+                p{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 14px;
+                    color: #572EE5;
+                    text-align: center;
+                    line-height: 25px;
+                }
+            }
+            }
     }
 }
 

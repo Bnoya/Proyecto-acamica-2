@@ -3,6 +3,7 @@ eliminar */
 import { createCard } from './small_card.js';
 import { getGifTrending } from './trendingGifs.js';
 import { startDarkMode } from './darkMode.js';
+import { scrollRight, scrollLeft } from './scrollF.js'
 
 getGifTrending();
 var button = document.getElementById("dark-mode-btn");
@@ -42,7 +43,6 @@ async function getGifFavorite() {
     try{
         const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
         let favs = getfavs();
-        console.log(favs);
         let more = document.getElementById('btn');
         let cont = document.getElementById('favorites_display'); 
         let url = `https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${favs}`;
@@ -74,5 +74,14 @@ newGifbtn.addEventListener('mouseout', () =>{
     newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
 });
 
+let sliderBtnR = document.getElementById('next');
+sliderBtnR.addEventListener('click', () => {
+    scrollRight();
+})
+
+let sliderBtnL = document.getElementById('back');
+sliderBtnL.addEventListener('click', () => {
+    scrollLeft();
+})
 
 export {getfavs, setfavs, removeFav};

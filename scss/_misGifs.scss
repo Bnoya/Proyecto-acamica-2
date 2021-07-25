@@ -1,38 +1,121 @@
-.center{
-    .my-gifs{
-        height: 300px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .gif-container{
-            .heart{
-                align-content: center;
-                margin-left: 36%;
+@media (min-width: 900px){   
+    .center{
+        .my-gifs{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .gif-container{
+                .heart{
+                    align-content: center;
+                    margin-left: 36%;
+                }
+                h2{
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 20px;
+                    color: #572EE5;
+                    text-align: center;
+                    line-height: 30px;
+                }
+                .gif-carrusel{
+                    background-color: #37383C;
+                    height: 300px;
+                    width: 100%;
+                }
             }
-            h2{
-                font-family: 'Montserrat', sans-serif;
-                font-size: 20px;
+            .myGifs-container{
+                display: flex;
+                width: 75%;
+                .myGifs_display{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    .gifs-div{
+                        height: 200px;
+                        width: 260px;
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 22px;
+                        .gif-hover{
+                            display: none;
+                        }
+                        .gifs-img{
+                            width: 100%;
+                            height: 100%;
+                            &:hover {
+                                background: #572EE5;
+                                opacity: 1;
+                            }
+                        }
+                        &:hover {
+                            .gif-hover{
+                                height: 200px;
+                                width: 260px;
+                                margin-top: -200px;
+                                background-color: #572EE599;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                .txt{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    margin-bottom: 10px;
+                                    p{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        padding: 0;
+                                        margin-left: 18px;
+                                        font-family: 'Roboto';
+                                        font-size: 15px;
+                                    color: #FFFFFF;
+                                    text-align: center;
+                                }
+                                h6{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-size: 16px;
+                                    margin-left: 18px;
+                                    color: #FFFFFF;
+                                    font-weight: bold;
+                                }
+                            }
+                            .btn{
+                                display: flex;
+                                height: 50px;
+                                width: 100%;
+                                justify-content: flex-end;
+                                flex-direction: row;
+                                img{
+                                    margin-right: 10px;
+                                    margin-top: 10px;
+                                    height: 32px;
+                                    opacity: 0.6;
+                                    &:hover{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    }
+                }
+            }
+            .button{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                border: 1px solid #572EE5;
+                border-radius: 25px;
+                border-radius: 25px;
+                height: 50px;
+                width: 125px;
+                background-color: transparent;
                 color: #572EE5;
-                text-align: center;
-                line-height: 30px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: bold;
             }
-            .gif-carrusel{
-                background-color: #37383C;
-                height: 300px;
-                width: 100%;
-            }
-        }
-        .button{
-            border: 1px solid #572EE5;
-            border-radius: 25px;
-            border-radius: 25px;
-            height: 50px;
-            width: 125px;
-            background-color: transparent;
-            color: #572EE5;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
         }
     }
 }

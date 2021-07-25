@@ -55,77 +55,78 @@
 }
 
 @media (min-width: 900px){   
-.center{
-    .favorites{
-        .favorites-container{
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            .favorites_display{
+    .center{
+        .favorites{
+            .favorites-container{
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                width: 72%;
-                .gifs-div{
-                    width: 260px;
-                    height: 200px;
-                    margin-top: 22px;
-                    .gifs-img{
-                        width: 100%;
-                        height: 100%;
-                        &:hover {
-                            background: #572EE5;
-                            opacity: 1;
+                justify-content: center;
+                align-content: center;
+                .favorites_display{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    width: 72%;
+                    .gifs-div{
+                        width: 260px;
+                        height: 200px;
+                        margin-top: 22px;
+                        .gifs-img{
+                            width: 100%;
+                            height: 100%;
+                            &:hover {
+                                background: #572EE5;
+                                opacity: 1;
+                            }
                         }
-                    }
-                    &:hover {
-                        .gif-hover{
-                            height: 200px;
-                            width: 260px;
-                            margin-top: -200px;
-                            background-color: #572EE599;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
-                            .txt{
+                        &:hover {
+                            .gif-hover{
+                                height: 200px;
+                                width: 260px;
+                                margin-top: -200px;
+                                background-color: #572EE599;
                                 display: flex;
                                 flex-direction: column;
-                                align-items: flex-start;
-                                margin-bottom: 10px;
-                                p{
+                                justify-content: space-between;
+                                .txt{
                                     display: flex;
-                                    justify-content: flex-start;
-                                    padding: 0;
-                                    margin-left: 18px;
-                                    font-family: 'Roboto';
-                                    font-size: 15px;
-                                    color: #FFFFFF;
-                                    text-align: center;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    margin-bottom: 10px;
+                                    p{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        padding: 0;
+                                        margin-left: 18px;
+                                        font-family: 'Roboto';
+                                        font-size: 15px;
+                                        color: #FFFFFF;
+                                        text-align: center;
+                                    }
+                                    h6{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        font-family: 'Roboto', sans-serif;
+                                        font-size: 16px;
+                                        margin-left: 18px;
+                                        color: #FFFFFF;
+                                        font-weight: bold;
+                                    }
                                 }
-                                h6{
+                                .btn{
                                     display: flex;
-                                    justify-content: flex-start;
-                                    font-family: 'Roboto', sans-serif;
-                                    font-size: 16px;
-                                    margin-left: 18px;
-                                    color: #FFFFFF;
-                                    font-weight: bold;
-                                }
-                            }
-                            .btn{
-                                display: flex;
-                                height: 50px;
-                                width: 100%;
-                                justify-content: flex-end;
-                                flex-direction: row;
-                                img{
-                                    margin-right: 10px;
-                                    margin-top: 10px;
-                                    height: 32px;
-                                    opacity: 0.6;
-                                    &:hover{
-                                        opacity: 1;
+                                    height: 50px;
+                                    width: 100%;
+                                    justify-content: flex-end;
+                                    flex-direction: row;
+                                    img{
+                                        margin-right: 10px;
+                                        margin-top: 10px;
+                                        height: 32px;
+                                        opacity: 0.6;
+                                        &:hover{
+                                            opacity: 1;
+                                        }
                                     }
                                 }
                             }
@@ -133,11 +134,9 @@
                     }
                 }
             }
-        }
-        .button{
-            margin-top: 35px;
+            .button{
+                margin-top: 35px;
+            }
         }
     }
-}
-
 }

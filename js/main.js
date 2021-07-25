@@ -76,6 +76,9 @@ async function searchBar(word, search){
     } catch (error){
         console.log(error);
     }
+
+    let more = document.createElement('button');
+    
 }
 
 
@@ -145,16 +148,25 @@ async function  getWords() {
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
-        let opArr = data.data.slice(0,5);
-        let opTr = opArr[0];
+        let opArr = data.data.slice(0,6);
+        let cont = document.getElementById('tranw');
         for (let index = 1; index < opArr.length ; index++) {
             let word = opArr[index];
-            opTr = opTr + ', '+ word;
+            let span = document.createElement('span');
+            let p = document.createElement('p');
+            span.id = word;
+            if (index === 5) {
+                p.innerText = word;
+            }else{
+                p.innerText = `${word}, ` ;
+            }
+            span.appendChild(p);
+            cont.appendChild(span);
+
+            span.addEventListener('click', ()=>{
+                searchBar(span.id, search);
+            })
         }
-        let cont = document.getElementById('tranw');
-        cont.innerText = opTr;
-
-
     } catch (error){
         console.log(error);
     }

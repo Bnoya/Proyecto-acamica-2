@@ -26,6 +26,28 @@
             .myGifs-container{
                 display: flex;
                 width: 75%;
+                justify-content: center;
+                .noGif{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 100px;
+                    margin-bottom: 130px;
+                    img{
+                        width: 150px;
+                        height: 150px;
+
+                    }
+                    p{
+                        margin-top: 30px;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 22px;
+                        color: #50E3C2;
+                        text-align: center;
+                        line-height: 25px;
+                    }
+                }
                 .myGifs_display{
                     display: flex;
                     flex-direction: row;
@@ -100,7 +122,8 @@
                             }
                         }
                     }
-                    }
+                    
+                }
                 }
             }
             .button{

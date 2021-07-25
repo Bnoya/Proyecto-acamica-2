@@ -20,28 +20,45 @@ function getMyGifs (){
         myGif = localStorage.getItem('myGifs');
         myGifs= JSON.parse(myGif);
     }
-    console.log(myGifs);
     return (myGifs);
 } 
 
 async function getSelfGifs() { 
     try{
-        const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
-        let myGifs = getMyGifs();
-        let more = document.getElementById('btn');
+    let myGifs = getMyGifs();
+    
+    if (myGifs.length == 0) {
+        let btn = document.getElementById('btn');
+        btn.style.display = 'none';
+        let icon = document.createElement('img');
+        let iconContainer = document.createElement('div');
+        let place = document.getElementById('myGifs-container');
+        let message = document.createElement('p');
+        icon.src='./recursos/icon-mis-gifos-sin-contenido.svg';
+        iconContainer.setAttribute('class', 'noGif');
+        message.innerText='¡Animate a crear tu primer GIFO!';
+        iconContainer.appendChild(icon);
+        iconContainer.appendChild(message);
+        place.appendChild(iconContainer);
+    }else{
+        
         let cont = document.getElementById('myGifs_display'); 
-        let url = `https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${myGifs}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        for (let index = 0; index < 12; index++) {
-                createCard(data ,index, cont);
-            }
-        more.addEventListener('click', (index) => {
-            for (let index = 12; index < myGifs.length; index++) {
-                createCard(data ,index, cont);
-            }
-            more.style.display = 'none';
-        })
+            const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
+            let more = document.getElementById('btn');
+            let url = `https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${myGifs}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            for (let index = 0; index < 12; index++) {
+                    createCard(data ,index, cont);
+                }
+            more.addEventListener('click', (index) => {
+                for (let index = 12; index < myGifs.length; index++) {
+                    createCard(data ,index, cont);
+                }
+                more.style.display = 'none';
+            })
+
+        }
     
     } catch (err) {
     console.log('Error');    

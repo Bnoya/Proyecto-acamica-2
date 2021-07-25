@@ -254,9 +254,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
@@ -319,7 +319,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 1180px;
+    width: 90%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -469,6 +469,39 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.center .favorites .favorites-container .noGif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 130px;
+}
+
+.center .favorites .favorites-container .noGif img {
+  width: 150px;
+  height: 150px;
+}
+
+.center .favorites .favorites-container .noGif p {
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #50E3C2;
+  text-align: center;
+  line-height: 25px;
+  width: 60%;
 }
 
 .center .favorites .favorites-container .favorites_display .gifs-div {
@@ -663,6 +696,38 @@
     display: -ms-flexbox;
     display: flex;
     width: 75%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .center .my-gifs .myGifs-container .noGif {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 130px;
+  }
+  .center .my-gifs .myGifs-container .noGif img {
+    width: 150px;
+    height: 150px;
+  }
+  .center .my-gifs .myGifs-container .noGif p {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: #50E3C2;
+    text-align: center;
+    line-height: 25px;
   }
   .center .my-gifs .myGifs-container .myGifs_display {
     display: -webkit-box;
@@ -2007,6 +2072,12 @@
   line-height: 30px;
 }
 
+.center .container-search .search-gifs {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .center .container-search .search-gifs .gifs-div {
   height: 200px;
   width: 260px;
@@ -2026,6 +2097,29 @@
 .center .container-search .search-gifs .gifs-img {
   height: 200px;
   width: 260px;
+}
+
+.center .moreGifs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center .moreGifs .watchMore {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  height: 50px;
+  width: 125px;
+  background-color: transparent;
+  color: #572EE5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 .center .center-text {

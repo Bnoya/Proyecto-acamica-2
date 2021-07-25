@@ -65,14 +65,28 @@ async function searchBar(word, search){
             del.remove();
         }
     }
-    let url=`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&limit=12&q=${word}`;
+    let url=`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${word}`;
     try{
         const response = await fetch(url);
         const data = await response.json();
+        console.log (data);
         off.style.display = 'none';
         for (let i = 0; i < 12; i++){
             createCard(data, i, search);
         }
+        let home = document.getElementById('moreGifs')
+        let button = document.createElement('button');
+        button.src = './recursos/CTA-ver-mas.svg';
+        button.innerText = 'VER MAS';
+        button.setAttribute('class', 'watchMore');
+        home.appendChild(button);
+
+        button.addEventListener('click', () =>{
+            button.style.display = 'none';
+            for (let i = 12; i < 50 ; i++){
+                createCard(data, i, search);
+            }
+        })
     } catch (error){
         console.log(error);
     }

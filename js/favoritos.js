@@ -41,23 +41,41 @@ function getfavs (){
 
 async function getGifFavorite() { 
     try{
-        const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
         let favs = getfavs();
-        let more = document.getElementById('btn');
-        let cont = document.getElementById('favorites_display'); 
-        let url = `https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${favs}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        for (let index = 0; index < 12; index++) {
+        if (favs.length == 0) {
+            let btn = document.getElementById('btn');
+            btn.style.display = 'none';
+            let icon = document.createElement('img');
+            let iconContainer = document.createElement('div');
+            let place = document.getElementById('favorites-container');
+            let message = document.createElement('p');
+            icon.src='./recursos/icon-fav-sin-contenido.svg';
+            iconContainer.setAttribute('class', 'noGif');
+            message.innerText='¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!';
+            iconContainer.appendChild(icon);
+            iconContainer.appendChild(message);
+            place.appendChild(iconContainer);
+            let off = document.getElementById('favorites_display')
+            off.style.display= 'none'
+        }else{
+
+            const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
+            let more = document.getElementById('btn');
+            let cont = document.getElementById('favorites_display'); 
+            let url = `https://api.giphy.com/v1/gifs?api_key=${apiKey}&ids=${favs}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            for (let index = 0; index < 12; index++) {
                 createCard(data ,index, cont);
             }
-        more.addEventListener('click', (index) => {
-            for (let index = 12; index < favs.length; index++) {
-                createCard(data ,index, cont);
-            }
-            more.style.display = 'none';
-        })
-    
+            more.addEventListener('click', (index) => {
+                for (let index = 12; index < favs.length; index++) {
+                    createCard(data ,index, cont);
+                }
+                more.style.display = 'none';
+            })
+            
+        }
     } catch (err) {
     console.log('Error');    
     }

@@ -1,10 +1,14 @@
 import { getGifTrending } from './trendingGifs.js';
-import { startDarkMode } from './darkMode.js';
 import { createCard } from './small_card.js';
+import { startDarkMode, toggleDarkMode, isDarkMode } from './darkMode.js';
 
 
 var button = document.getElementById("dark-mode-btn");
-button.addEventListener("click", startDarkMode, true);
+button.addEventListener("click", () => {
+    toggleDarkMode();
+});
+
+startDarkMode(isDarkMode());
 
 /*getGifTrending();*/
 

@@ -985,17 +985,26 @@
   color: #ffffff;
 }
 
-.dark-mode .center .search-bar input {
+.dark-mode .center .search-border {
+  border: 1px #fff;
+}
+
+.dark-mode .center .search-border .search-bar input {
   border-color: #ffffff;
   background-color: #37383C;
+  color: #FFFFFF;
 }
 
 .dark-mode .center .center-text h3 {
   color: #ffffff;
 }
 
-.dark-mode .center .center-text p {
+.dark-mode .center .center-text .tranw span p {
   color: #ffffff;
+}
+
+.dark-mode .center .title-search .h4 {
+  color: #FFFFFF;
 }
 
 .dark-mode .center .trending-container {

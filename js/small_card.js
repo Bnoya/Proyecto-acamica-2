@@ -1,5 +1,7 @@
-import {getfavs , removeFav, setfavs} from './favoritos.js';
+/*import {getfavs , removeFav, setfavs} from './favoritos.js';*/
+import {getfavs, setfavs, removeFav} from './favsSet.js'
 import{bigCard} from './bigCard.js';
+
 const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
     function createCard(info, index, gif){
     const div = document.createElement('div');

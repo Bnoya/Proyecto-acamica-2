@@ -1,4 +1,11 @@
-import {startDarkMode} from './darkMode.js';
+import { startDarkMode, toggleDarkMode, isDarkMode } from './darkMode.js';
+
+var button = document.getElementById("dark-mode-btn");
+button.addEventListener("click", () => {
+    toggleDarkMode();
+});
+
+startDarkMode(isDarkMode());
 
 const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
 var button = document.getElementById("dark-mode-btn");

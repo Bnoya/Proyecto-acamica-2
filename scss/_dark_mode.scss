@@ -20,18 +20,32 @@
         .title{
             color: #ffffff;
         }
-        .search-bar{
-            input{
-                border-color: #ffffff;
-                background-color: #37383C;
+        .search-border{
+            border: 1px #fff;
+            .search-bar{
+                input{
+                    border-color: #ffffff;
+                    background-color: #37383C;
+                    color: #FFFFFF;
+                }
             }
         }
         .center-text{
             h3{
                 color: #ffffff;
             }
-            p{
-                color: #ffffff;
+            .tranw{
+                span{
+                    p{
+                        color: #ffffff
+                    }
+                }                
+            }
+        }
+        .title-search{
+            
+            .h4{
+                color: #FFFFFF;
             }
         }
         .trending-container{

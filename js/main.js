@@ -1,19 +1,27 @@
-
 import { createCard } from './small_card.js';
 import { getGifTrending} from './trendingGifs.js';
-import { startDarkMode } from './darkMode.js';
+import { startDarkMode, toggleDarkMode, isDarkMode } from './darkMode.js';
 import { scrollRight, scrollLeft } from './scrollF.js'
 /**Dark mode On */
 const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
+let blue_btn = document.getElementById('btn_search');
 
 var button = document.getElementById("dark-mode-btn");
-button.addEventListener("click", startDarkMode, true);
+button.addEventListener("click", () => {
+    toggleDarkMode();
+});
+
+startDarkMode(isDarkMode());
 
 
+if (isDarkMode()) {
+    blue_btn.src = './recursos/icon-search-modo-noct.svg';
+    button.innerText='Modo Diurno';
 
+}
 /* Gif Trainding */
-/*
-getGifTrending();*/
+
+getGifTrending();
 /* Search Function */  
 
 
@@ -32,9 +40,13 @@ async function searchBar(word, search){
     
     getGifTrending();
 
-    let blue_btn = document.getElementById('btn_search');
     blue_btn.classList.remove('hide');
-    blue_btn.src = './recursos/close.svg';
+    if (isDarkMode()) {
+        blue_btn.src = './recursos/close-modo-noct.svg';
+    } else{
+
+        blue_btn.src = './recursos/close.svg';
+    }
     blue_btn.addEventListener('click', e => location.reload());
 
     let off = document.getElementById('center-text');
@@ -251,4 +263,4 @@ instagram.addEventListener('mouseout', () =>{
     instagram.src = './recursos/icon_instagram.svg';
 });
 
-export{startDarkMode, apiKey};
+export{ apiKey};

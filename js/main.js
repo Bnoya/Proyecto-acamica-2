@@ -32,6 +32,11 @@ async function searchBar(word, search){
     
     getGifTrending();
 
+    let blue_btn = document.getElementById('btn_search');
+    blue_btn.classList.remove('hide');
+    blue_btn.src = './recursos/close.svg';
+    blue_btn.addEventListener('click', e => location.reload());
+
     let off = document.getElementById('center-text');
     let leave1 = document.getElementById('leave1');
     let leave2 = document.getElementById('leave2');
@@ -69,24 +74,37 @@ async function searchBar(word, search){
     try{
         const response = await fetch(url);
         const data = await response.json();
-        console.log (data);
+        console.log(data);
         off.style.display = 'none';
-        for (let i = 0; i < 12; i++){
-            createCard(data, i, search);
-        }
-        let home = document.getElementById('moreGifs')
-        let button = document.createElement('button');
-        button.src = './recursos/CTA-ver-mas.svg';
-        button.innerText = 'VER MAS';
-        button.setAttribute('class', 'watchMore');
-        home.appendChild(button);
-
-        button.addEventListener('click', () =>{
-            button.style.display = 'none';
-            for (let i = 12; i < 50 ; i++){
+        if (data.data.length !== 0) {
+            for (let i = 0; i < 12; i++){
                 createCard(data, i, search);
             }
-        })
+            let home = document.getElementById('moreGifs')
+            let button = document.createElement('button');
+            button.src = './recursos/CTA-ver-mas.svg';
+            button.innerText = 'VER MAS';
+            button.setAttribute('class', 'watchMore');
+            home.appendChild(button);
+    
+            button.addEventListener('click', () =>{
+                button.style.display = 'none';
+                for (let i = 12; i < 50 ; i++){
+                    createCard(data, i, search);
+                }
+            })
+            
+        } else{
+            let noGif = document.createElement('div');
+            let noResImg = document.createElement('img');
+            let noResP = document.createElement('p');
+            noResP.innerText = "Intenta con otra búsqueda.";
+            noResImg.src = './recursos/icon-busqueda-sin-resultado.svg';
+            noGif.classList.add('wrong')
+            noGif.appendChild(noResImg);
+            noGif.appendChild(noResP);
+            search.appendChild(noGif);
+        }
     } catch (error){
         console.log(error);
     }
@@ -110,7 +128,7 @@ async function suggestionBar(){
     }
     let blue_btn = document.getElementById('btn_search');
     let img = document.getElementById('search-gray');
-    /*blue_btn.classList.add('hide');*/
+    blue_btn.classList.add('hide');
     img.classList.remove('hide');
     img.style.opacity = 1;
     if(input.value == ''){

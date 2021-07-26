@@ -140,6 +140,7 @@
         .container-search{
             .search-gifs{
                 align-self: center;
+                align-content: center;
                 .gifs-div{
                     height: 200px;
                     width: 260px;
@@ -153,7 +154,28 @@
                     height: 200px;
                     width: 260px;
                 }
-                
+                .wrong{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-self: center;
+                    margin-bottom: 140px;
+                    img{
+                        width: 150px;
+                        height: 150px;
+                        align-content: center;
+                        margin-left: 35px;
+                    }
+                    p{
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: bold;
+                        font-size: 22px;
+                        color: #50E3C2;
+                        text-align: center;
+                        line-height: 25px;
+                        margin-top: 25px;
+                    }
+                }
             }
         }
         .moreGifs{

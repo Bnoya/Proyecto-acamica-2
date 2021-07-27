@@ -57,6 +57,12 @@
                 color: #ffffff;
             }
         }
+        .moreGifs{
+            .watchMore{
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
+            }
+        }
     }
     /* centro en dark mode funciona falta ver carrusel*/
     .footer{
@@ -114,6 +120,15 @@
         .menu{
             .nav-links{
                 background-color: unset;
+                li{
+                    a{
+
+                        color: #FFFFFF;
+                    }
+                }
+                button{
+                    color: #FFFFFF;
+                }
             }
         }
     }

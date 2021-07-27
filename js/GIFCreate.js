@@ -8,8 +8,7 @@ button.addEventListener("click", () => {
 startDarkMode(isDarkMode());
 
 const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
-var button = document.getElementById("dark-mode-btn");
-button.addEventListener("click", startDarkMode, true);
+
 
 
 let video = document.createElement('video');
@@ -289,5 +288,42 @@ newGifbtn.addEventListener('mouseover', () => {
     newGifbtn.src = './recursos/CTA-crear-gifo-hover.svg'
 });
 newGifbtn.addEventListener('mouseout', () =>{
-    newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
+    if (isDarkMode()) {
+        newGifbtn.src ='./recursos/CTA-crar-gifo-modo-noc.svg'
+    }else{
+
+        newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
+    }
+});
+
+let buttonNext = document.getElementById('btn-next-img');
+let buttonPrev = document.getElementById('btn-prev-img');
+let logo = document.getElementById('GifosLogo');
+let plusGif = document.getElementById('createGifbtn');
+if (isDarkMode()) {
+    button.innerText='Modo Diurno';
+    buttonPrev.src='./recursos/button-slider-left-md-noct.svg';
+    buttonNext.src='./recursos/button-slider-right-md-noct.svg';
+    logo.src ='./recursos/Logo-modo-noc.svg';
+    plusGif.src ='./recursos/CTA-crar-gifo-modo-noc.svg'
+}
+buttonPrev.addEventListener('mouseover', () =>{
+    buttonPrev.src='./recursos/button-slider-left-hover.svg';
+});
+buttonPrev.addEventListener('mouseout', () =>{
+    if (isDarkMode()) {
+        buttonPrev.src='./recursos/button-slider-left-md-noct.svg';
+    } else{
+        buttonPrev.src='./recursos/button-slider-left.svg';
+    }
+});
+buttonNext.addEventListener('mouseover', () =>{
+    buttonNext.src='./recursos/button-slider-right-hover.svg';
+});
+buttonNext.addEventListener('mouseout', () =>{
+    if (isDarkMode()) {
+        buttonNext.src='./recursos/button-slider-right-md-noct.svg';
+    } else{
+        buttonNext.src='./recursos/button-slider-right.svg';
+    }
 });

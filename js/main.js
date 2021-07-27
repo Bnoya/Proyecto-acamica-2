@@ -5,8 +5,11 @@ import { scrollRight, scrollLeft } from './scrollF.js'
 /**Dark mode On */
 const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
 let blue_btn = document.getElementById('btn_search');
-
+let buttonNext = document.getElementById('btn-next-img');
+let buttonPrev = document.getElementById('btn-prev-img');
 var button = document.getElementById("dark-mode-btn");
+let logo = document.getElementById('GifosLogo');
+let plusGif = document.getElementById('createGifbtn');
 button.addEventListener("click", () => {
     toggleDarkMode();
 });
@@ -14,10 +17,33 @@ button.addEventListener("click", () => {
 startDarkMode(isDarkMode());
 
 
+buttonPrev.addEventListener('mouseover', () =>{
+    buttonPrev.src='./recursos/button-slider-left-hover.svg';
+});
+buttonPrev.addEventListener('mouseout', () =>{
+    if (isDarkMode()) {
+        buttonPrev.src='./recursos/button-slider-left-md-noct.svg';
+    } else{
+        buttonPrev.src='./recursos/button-slider-left.svg';
+    }
+});
+buttonNext.addEventListener('mouseover', () =>{
+    buttonNext.src='./recursos/button-slider-right-hover.svg';
+});
+buttonNext.addEventListener('mouseout', () =>{
+    if (isDarkMode()) {
+        buttonNext.src='./recursos/button-slider-right-md-noct.svg';
+    } else{
+        buttonNext.src='./recursos/button-slider-right.svg';
+    }
+});
 if (isDarkMode()) {
     blue_btn.src = './recursos/icon-search-modo-noct.svg';
     button.innerText='Modo Diurno';
-
+    buttonPrev.src='./recursos/button-slider-left-md-noct.svg';
+    buttonNext.src='./recursos/button-slider-right-md-noct.svg';
+    logo.src ='./recursos/Logo-modo-noc.svg';
+    plusGif.src ='./recursos/CTA-crar-gifo-modo-noc.svg'
 }
 /* Gif Trainding */
 
@@ -95,6 +121,9 @@ async function searchBar(word, search){
             let home = document.getElementById('moreGifs')
             let button = document.createElement('button');
             button.src = './recursos/CTA-ver-mas.svg';
+            if (isDarkMode()) {
+                button.src = './recursos/CTA-ver-mas.svg'
+            }
             button.innerText = 'VER MAS';
             button.setAttribute('class', 'watchMore');
             home.appendChild(button);
@@ -236,7 +265,12 @@ newGifbtn.addEventListener('mouseover', () => {
     newGifbtn.src = './recursos/CTA-crear-gifo-hover.svg'
 });
 newGifbtn.addEventListener('mouseout', () =>{
-    newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
+    if (isDarkMode()) {
+        newGifbtn.src ='./recursos/CTA-crar-gifo-modo-noc.svg'
+    }else{
+
+        newGifbtn.src = './recursos/CTA-crear-gifo-active.svg';
+    }
 });
 
 let twitter = document.getElementById('twitter');

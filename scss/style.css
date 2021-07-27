@@ -429,6 +429,9 @@
     margin-right: 94px;
     margin-left: 15px;
   }
+  .trending-container .container-gifs .prev {
+    margin-right: 15px;
+  }
 }
 
 .center .favorites {
@@ -1019,6 +1022,11 @@
   color: #ffffff;
 }
 
+.dark-mode .center .moreGifs .watchMore {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
 .dark-mode .footer {
   background: #37383C;
 }
@@ -1056,6 +1064,12 @@
 @media (min-width: 900px) {
   .dark-mode .menu .nav-links {
     background-color: unset;
+  }
+  .dark-mode .menu .nav-links li a {
+    color: #FFFFFF;
+  }
+  .dark-mode .menu .nav-links button {
+    color: #FFFFFF;
   }
 }
 

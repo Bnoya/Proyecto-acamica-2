@@ -57,6 +57,9 @@
             .footerbtn{
                 display: flex;
                 flex-direction: row;
+                .favbtn{
+                    margin-top: 7px;
+                }
                 a{
                     margin-right: 5px;
                     img{
@@ -127,6 +130,9 @@
             .footerbtn{
                 display: flex;
                 flex-direction: row;
+                .favbtn{
+                    margin-top: 7px;
+                }
                 a{
                     margin-right: 5px;
                     img{

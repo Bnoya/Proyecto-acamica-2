@@ -1,4 +1,5 @@
 import { startDarkMode, toggleDarkMode, isDarkMode } from './darkMode.js';
+import { downloadMyGif } from './downloadMyGif.js';
 
 var button = document.getElementById("dark-mode-btn");
 button.addEventListener("click", () => {
@@ -116,10 +117,11 @@ let StartnStop = async (stream) => {
             let loadingIcon = document.createElement('img');
             let status = document.createElement('p');
             let download = document.createElement('img');
+            let downloadA = document.createElement('a')
             let link = document.createElement('img');
             let buttons = document.createElement('div');
             let message = document.createElement('div');
-
+            downloadA.appendChild(download)
             status.innerText= 'Estamos Subiendo tu GIFO';
             loadingIcon.src = './recursos/loader.svg';
 
@@ -128,20 +130,22 @@ let StartnStop = async (stream) => {
             status.setAttribute('class', 'loadingMess');
 
             download.setAttribute('class', 'download');
+            
+
             link.setAttribute('class', 'link');
             buttons.setAttribute('class', 'buttons');
             message.setAttribute('class', 'message');
-
+            button.style.zIndex= '8';
             containerVideo.appendChild(purpleHover);
             purpleHover.appendChild(buttons);
             purpleHover.appendChild(message);
-            buttons.appendChild(download);
+            buttons.appendChild(downloadA);
             buttons.appendChild(link);
             message.appendChild(loadingIcon);
             message.appendChild(status);
 
 
-            let uploaded = await uploadGif(blob);
+            let {uploaded, gifId} = await uploadGif(blob);
             if (uploaded) {
                 loadingIcon.classList.remove('spinning');
                 loadingIcon.src= './recursos/ok.svg'
@@ -149,9 +153,14 @@ let StartnStop = async (stream) => {
                 download.src = './recursos/icon-download.svg';
                 link.src = './recursos/icon-link-normal.svg';
                 message.style.marginTop = '-32px';
+                console.log(gifId)
+                download.addEventListener('click', (gifId) =>{
+                    downloadMyGif(gifId, downloadA);
+                });
                 download.addEventListener('mouseover', () => {
                     download.src = './recursos/icon-download-hover.svg'
                 });
+                
                 link.addEventListener('mouseover', () => {
                     link.src = './recursos/icon-link-hover.svg'
                 });
@@ -246,19 +255,19 @@ btnbegin.addEventListener('click', async () =>{
 const uploadGif = async (blob) =>  {
     const uploadUrl = `https://upload.giphy.com/v1/gifs?api_key=${apiKey}`;
     let form = new FormData();
-    console.log(blob)
     form.append('file', blob, 'myGif.gif');
     let response = await fetch(uploadUrl, {
         body: form,
         method: "post"
     })
     let data = await response.json();
+    console.log(data.data.id);
     if (response.status == 200) {
         saveMyGif(data.data.id)
-        return true
+        return {uploaded: true, gifId: data.data.id}
     } else {
         console.log('Hubo un error: '+ response.status)
-        return false
+        return {uploaded: false, gifId: null}
     }
 }
 
@@ -296,34 +305,42 @@ newGifbtn.addEventListener('mouseout', () =>{
     }
 });
 
-let buttonNext = document.getElementById('btn-next-img');
-let buttonPrev = document.getElementById('btn-prev-img');
+
 let logo = document.getElementById('GifosLogo');
 let plusGif = document.getElementById('createGifbtn');
+let camara_noct = document.getElementById('camara_noct');
+let roll = document.getElementById('roll');
+
+
 if (isDarkMode()) {
     button.innerText='Modo Diurno';
-    buttonPrev.src='./recursos/button-slider-left-md-noct.svg';
-    buttonNext.src='./recursos/button-slider-right-md-noct.svg';
     logo.src ='./recursos/Logo-modo-noc.svg';
-    plusGif.src ='./recursos/CTA-crar-gifo-modo-noc.svg'
+    plusGif.src ='./recursos/CTA-crar-gifo-modo-noc.svg';
+    camara_noct.src ='./recursos/camara-modo-noc.svg';
+    roll.src = './recursos/pelicula-modo-noc.svg';
+
 }
-buttonPrev.addEventListener('mouseover', () =>{
-    buttonPrev.src='./recursos/button-slider-left-hover.svg';
+
+let twitter = document.getElementById('twitter');
+twitter.addEventListener('mouseover', () => {
+    twitter.src = './recursos/icon-twitter-hover.svg'
 });
-buttonPrev.addEventListener('mouseout', () =>{
-    if (isDarkMode()) {
-        buttonPrev.src='./recursos/button-slider-left-md-noct.svg';
-    } else{
-        buttonPrev.src='./recursos/button-slider-left.svg';
-    }
+twitter.addEventListener('mouseout', () =>{
+    twitter.src = './recursos/icon-twitter.svg';
 });
-buttonNext.addEventListener('mouseover', () =>{
-    buttonNext.src='./recursos/button-slider-right-hover.svg';
+
+let facebook = document.getElementById('facebook');
+facebook.addEventListener('mouseover', () => {
+    facebook.src = './recursos/icon_facebook_hover.svg'
 });
-buttonNext.addEventListener('mouseout', () =>{
-    if (isDarkMode()) {
-        buttonNext.src='./recursos/button-slider-right-md-noct.svg';
-    } else{
-        buttonNext.src='./recursos/button-slider-right.svg';
-    }
+facebook.addEventListener('mouseout', () =>{
+    facebook.src = './recursos/icon_facebook.svg';
+});
+
+let instagram = document.getElementById('instagram');
+instagram.addEventListener('mouseover', () => {
+    instagram.src = './recursos/icon_instagram-hover.svg'
+});
+instagram.addEventListener('mouseout', () =>{
+    instagram.src = './recursos/icon_instagram.svg';
 });

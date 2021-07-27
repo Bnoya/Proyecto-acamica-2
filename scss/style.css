@@ -307,6 +307,7 @@
 @media (min-width: 900px) {
   .trending-container {
     height: 640px;
+    margin-top: 25px;
   }
   .trending-container .container-gifs {
     margin-top: 125px;
@@ -663,6 +664,133 @@
   }
 }
 
+.center .my-gifs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center .my-gifs .gif-container .heart {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 36%;
+}
+
+.center .my-gifs .gif-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.center .my-gifs .gif-container .gif-carrusel {
+  background-color: #37383C;
+  height: 300px;
+  width: 100%;
+}
+
+.center .my-gifs .myGifs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center .my-gifs .myGifs-container .noGif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 130px;
+}
+
+.center .my-gifs .myGifs-container .noGif img {
+  width: 150px;
+  height: 150px;
+}
+
+.center .my-gifs .myGifs-container .noGif p {
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #50E3C2;
+  text-align: center;
+  line-height: 25px;
+}
+
+.center .my-gifs .myGifs-container .myGifs_display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.center .my-gifs .myGifs-container .myGifs_display .gifs-div {
+  height: 200px;
+  width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 22px;
+}
+
+.center .my-gifs .myGifs-container .myGifs_display .gifs-div .gif-hover {
+  display: none;
+}
+
+.center .my-gifs .myGifs-container .myGifs_display .gifs-div .gifs-img {
+  width: 100%;
+  height: 100%;
+}
+
+.center .my-gifs .button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  height: 50px;
+  width: 125px;
+  background-color: transparent;
+  color: #572EE5;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
 @media (min-width: 900px) {
   .center .my-gifs {
     width: 100%;
@@ -874,6 +1002,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 196px;
 }
 
@@ -887,8 +1018,8 @@
 }
 
 .footer .social .social-container {
-  margin-left: -20px;
   margin-top: 22px;
+  padding-left: 15px;
 }
 
 .footer .social .social-container a {
@@ -1061,6 +1192,35 @@
   background: #37383C;
 }
 
+.dark-mode .create .container .rectangle {
+  border: 1px solid #FFFFFF;
+}
+
+.dark-mode .create .container .rectangle .frame2 .text .titulo {
+  color: #FFFFFF;
+}
+
+.dark-mode .create .container .rectangle .frame2 .text .texts {
+  color: #FFFFFF;
+}
+
+.dark-mode .create .containerSteps .positioning .steps .step {
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.dark-mode .create .span {
+  background: #FFFFFF;
+}
+
+.dark-mode .create .startBtn {
+  border: 1px solid #FFFFFF;
+}
+
+.dark-mode .create .startBtn button {
+  color: #FFFFFF;
+}
+
 @media (min-width: 900px) {
   .dark-mode .menu .nav-links {
     background-color: unset;
@@ -1183,6 +1343,10 @@
           flex-direction: row;
 }
 
+.bigCardt .footercont .cardFooter .footerbtn .favbtn {
+  margin-top: 7px;
+}
+
 .bigCardt .footercont .cardFooter .footerbtn a {
   margin-right: 5px;
 }
@@ -1300,6 +1464,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.bigCard .footercont .cardFooter .footerbtn .favbtn {
+  margin-top: 7px;
 }
 
 .bigCard .footercont .cardFooter .footerbtn a {
@@ -1657,6 +1825,7 @@
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-top: 11px;
+    z-index: 8;
   }
   .create .container .rectangle .frame2 .purpleHover .buttons .download {
     -webkit-box-align: end;

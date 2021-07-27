@@ -110,7 +110,40 @@
 
     .create{
         background: #37383C;
-    
+        .container{
+            .rectangle{
+                border: 1px solid #FFFFFF;
+                .frame2{
+                    .text{
+                        .titulo{
+                            color: #FFFFFF;
+                        }
+                        .texts{
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+        .containerSteps{
+            .positioning{
+                .steps{
+                    .step{
+                        border: 1px solid #FFFFFF;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .span{
+            background: #FFFFFF;
+        }
+        .startBtn{
+            border: 1px solid #FFFFFF;
+            button{
+                color: #FFFFFF;
+            }
+        }
     }
 
 }

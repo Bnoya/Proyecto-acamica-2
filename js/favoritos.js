@@ -56,8 +56,13 @@ async function getGifFavorite() {
             iconContainer.appendChild(message);
             place.appendChild(iconContainer);
             let off = document.getElementById('favorites_display')
-            off.style.display= 'none'
+            off.style.display= 'none';
+            
         }else{
+            if (favs.length <= 12) {
+                let more  = document.getElementById('btn');
+                more.style.display = 'none';
+            }
             const apiKey = 'O1ETr1fxsaxXqPfEced8hyndbec7c3C9';
             let more = document.getElementById('btn');
             let cont = document.getElementById('favorites_display'); 

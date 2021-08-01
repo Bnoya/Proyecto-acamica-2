@@ -1,5 +1,5 @@
 import { startDarkMode, toggleDarkMode, isDarkMode } from './darkMode.js';
-import { downloadMyGif } from './downloadMyGif.js';
+import { downloadMyGif, gifLink } from './downloadMyGif.js';
 
 var button = document.getElementById("dark-mode-btn");
 button.addEventListener("click", () => {
@@ -152,6 +152,8 @@ let StartnStop = async (stream) => {
                 status.innerText = 'GIFO subido con éxito'
                 download.src = './recursos/icon-download.svg';
                 link.src = './recursos/icon-link-normal.svg';
+                /*
+                link.setAttribute('onclick', 'gifLink(gifId)');*/
                 message.style.marginTop = '-32px';
                 console.log(gifId)
                 download.addEventListener('click', (gifId) =>{
@@ -164,6 +166,9 @@ let StartnStop = async (stream) => {
                 link.addEventListener('mouseover', () => {
                     link.src = './recursos/icon-link-hover.svg'
                 });
+                link.addEventListener('click', ()=> {
+                    gifLink(gifId)
+                })
                 
             }else{
                 status.innerText = 'No podimos subir su GIFO. Intentelo mas tarde!'
@@ -262,6 +267,7 @@ const uploadGif = async (blob) =>  {
     })
     let data = await response.json();
     console.log(data.data.id);
+
     if (response.status == 200) {
         saveMyGif(data.data.id)
         return {uploaded: true, gifId: data.data.id}

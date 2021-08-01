@@ -60,6 +60,13 @@ btn.addEventListener('click', ()=> {
     searchBar(inputs.value, search);
 });
 
+inputs.addEventListener('keydown', (e) => {
+    if (e.key ==='Enter') {
+        searchBar(inputs.value, search);
+    } else{
+        suggestionBar();
+    }
+})
 
 
 async function searchBar(word, search){
@@ -95,17 +102,16 @@ async function searchBar(word, search){
     place.appendChild(line);
     place.appendChild(title);
 
-
-    for (let i=0; i<15; i++){
+    for (let i=0; i<65; i++){
         let del = document.getElementById('del');
         if (del !== null){
             del.remove();
         }
     }
-    for (let i=0; i<15; i++){
-        let del = document.getElementById('dels');
-        if (del !== null){
-            del.remove();
+    for (let i=0; i<65; i++){
+        let dels = document.getElementById('dels');
+        if (dels !== null){
+            dels.remove();
         }
     }
     let url=`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${word}`;
@@ -126,6 +132,7 @@ async function searchBar(word, search){
             }
             button.innerText = 'VER MAS';
             button.setAttribute('class', 'watchMore');
+            button.setAttribute('id', 'del')
             home.appendChild(button);
     
             button.addEventListener('click', () =>{
@@ -169,7 +176,16 @@ async function suggestionBar(){
     }
     let blue_btn = document.getElementById('btn_search');
     let img = document.getElementById('search-gray');
-    blue_btn.classList.add('hide');
+
+    if (isDarkMode()) {
+        blue_btn.src = './recursos/close-modo-noct.svg';
+    } else{
+
+        blue_btn.src = './recursos/close.svg';
+    }
+    blue_btn.addEventListener('click', e => location.reload());
+
+
     img.classList.remove('hide');
     img.style.opacity = 1;
     if(input.value == ''){
